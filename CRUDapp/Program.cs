@@ -39,6 +39,7 @@ namespace MyApplication
                 Console.WriteLine("R: Read a name from the array.");
                 Console.WriteLine("U: Change a name in the array.");
                 Console.WriteLine("D: Remove a name from the array.");
+                Console.WriteLine("Sort: Sort the names alphabetcially.");
                 Console.WriteLine("Q: Quit the program.");
                     
                 //get a valid user option from the menu
@@ -51,7 +52,8 @@ namespace MyApplication
                                 || userChoiceString=="R"|| userChoiceString=="r"
                                 || userChoiceString=="U"|| userChoiceString=="u"
                                 || userChoiceString=="D"|| userChoiceString=="d"
-                                || userChoiceString=="Q"|| userChoiceString=="q");
+                                || userChoiceString=="Q"|| userChoiceString=="q"
+                                || userChoiceString=="Sort");
 
                 if (!userChoice) //if not valid tell to enter valid option
                 {
@@ -74,7 +76,7 @@ namespace MyApplication
                         Console.WriteLine(s);
                         nameArray[index]=s;
                         index=index+1;
-                        if (index==10)
+                        if (index==nameArray.Length)
                         {
                             break;
                         }
@@ -230,6 +232,16 @@ namespace MyApplication
                         Console.WriteLine($"{deleteName} not found. Which name do you want to delete?");
                     }; 
             }
+        
+            else if (userChoiceString=="Sort")
+            {
+                Array.Sort(nameArray);
+                foreach(string name in nameArray)
+                {
+                    Console.WriteLine(name);
+                }
+            }
+
         //else if the option is Q or q then quit the program 
             else 
             {
