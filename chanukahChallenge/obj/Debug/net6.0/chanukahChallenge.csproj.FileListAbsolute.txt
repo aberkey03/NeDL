@@ -1,0 +1,15 @@
+C:\Users\ABerkey\Desktop\NeDL\chanukahChallenge\bin\Debug\net6.0\chanukahChallenge.exe
+C:\Users\ABerkey\Desktop\NeDL\chanukahChallenge\bin\Debug\net6.0\chanukahChallenge.deps.json
+C:\Users\ABerkey\Desktop\NeDL\chanukahChallenge\bin\Debug\net6.0\chanukahChallenge.runtimeconfig.json
+C:\Users\ABerkey\Desktop\NeDL\chanukahChallenge\bin\Debug\net6.0\chanukahChallenge.dll
+C:\Users\ABerkey\Desktop\NeDL\chanukahChallenge\bin\Debug\net6.0\ref\chanukahChallenge.dll
+C:\Users\ABerkey\Desktop\NeDL\chanukahChallenge\bin\Debug\net6.0\chanukahChallenge.pdb
+C:\Users\ABerkey\Desktop\NeDL\chanukahChallenge\obj\Debug\net6.0\chanukahChallenge.csproj.AssemblyReference.cache
+C:\Users\ABerkey\Desktop\NeDL\chanukahChallenge\obj\Debug\net6.0\chanukahChallenge.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ABerkey\Desktop\NeDL\chanukahChallenge\obj\Debug\net6.0\chanukahChallenge.AssemblyInfoInputs.cache
+C:\Users\ABerkey\Desktop\NeDL\chanukahChallenge\obj\Debug\net6.0\chanukahChallenge.AssemblyInfo.cs
+C:\Users\ABerkey\Desktop\NeDL\chanukahChallenge\obj\Debug\net6.0\chanukahChallenge.csproj.CoreCompileInputs.cache
+C:\Users\ABerkey\Desktop\NeDL\chanukahChallenge\obj\Debug\net6.0\chanukahChallenge.dll
+C:\Users\ABerkey\Desktop\NeDL\chanukahChallenge\obj\Debug\net6.0\ref\chanukahChallenge.dll
+C:\Users\ABerkey\Desktop\NeDL\chanukahChallenge\obj\Debug\net6.0\chanukahChallenge.pdb
+C:\Users\ABerkey\Desktop\NeDL\chanukahChallenge\obj\Debug\net6.0\chanukahChallenge.genruntimeconfig.cache

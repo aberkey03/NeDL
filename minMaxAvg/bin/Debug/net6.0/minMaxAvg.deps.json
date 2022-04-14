@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "minMaxAvg/1.0.0": {
+        "runtime": {
+          "minMaxAvg.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "minMaxAvg/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

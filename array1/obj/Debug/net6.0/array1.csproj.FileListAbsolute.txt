@@ -1,0 +1,15 @@
+C:\Users\ABerkey\Desktop\NeDL\array1\bin\Debug\net6.0\array1.exe
+C:\Users\ABerkey\Desktop\NeDL\array1\bin\Debug\net6.0\array1.deps.json
+C:\Users\ABerkey\Desktop\NeDL\array1\bin\Debug\net6.0\array1.runtimeconfig.json
+C:\Users\ABerkey\Desktop\NeDL\array1\bin\Debug\net6.0\array1.dll
+C:\Users\ABerkey\Desktop\NeDL\array1\bin\Debug\net6.0\ref\array1.dll
+C:\Users\ABerkey\Desktop\NeDL\array1\bin\Debug\net6.0\array1.pdb
+C:\Users\ABerkey\Desktop\NeDL\array1\obj\Debug\net6.0\array1.csproj.AssemblyReference.cache
+C:\Users\ABerkey\Desktop\NeDL\array1\obj\Debug\net6.0\array1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ABerkey\Desktop\NeDL\array1\obj\Debug\net6.0\array1.AssemblyInfoInputs.cache
+C:\Users\ABerkey\Desktop\NeDL\array1\obj\Debug\net6.0\array1.AssemblyInfo.cs
+C:\Users\ABerkey\Desktop\NeDL\array1\obj\Debug\net6.0\array1.csproj.CoreCompileInputs.cache
+C:\Users\ABerkey\Desktop\NeDL\array1\obj\Debug\net6.0\array1.dll
+C:\Users\ABerkey\Desktop\NeDL\array1\obj\Debug\net6.0\ref\array1.dll
+C:\Users\ABerkey\Desktop\NeDL\array1\obj\Debug\net6.0\array1.pdb
+C:\Users\ABerkey\Desktop\NeDL\array1\obj\Debug\net6.0\array1.genruntimeconfig.cache

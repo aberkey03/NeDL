@@ -1,0 +1,15 @@
+C:\Users\ABerkey\Desktop\NeDL\file1\bin\Debug\net6.0\file1.exe
+C:\Users\ABerkey\Desktop\NeDL\file1\bin\Debug\net6.0\file1.deps.json
+C:\Users\ABerkey\Desktop\NeDL\file1\bin\Debug\net6.0\file1.runtimeconfig.json
+C:\Users\ABerkey\Desktop\NeDL\file1\bin\Debug\net6.0\file1.dll
+C:\Users\ABerkey\Desktop\NeDL\file1\bin\Debug\net6.0\ref\file1.dll
+C:\Users\ABerkey\Desktop\NeDL\file1\bin\Debug\net6.0\file1.pdb
+C:\Users\ABerkey\Desktop\NeDL\file1\obj\Debug\net6.0\file1.csproj.AssemblyReference.cache
+C:\Users\ABerkey\Desktop\NeDL\file1\obj\Debug\net6.0\file1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ABerkey\Desktop\NeDL\file1\obj\Debug\net6.0\file1.AssemblyInfoInputs.cache
+C:\Users\ABerkey\Desktop\NeDL\file1\obj\Debug\net6.0\file1.AssemblyInfo.cs
+C:\Users\ABerkey\Desktop\NeDL\file1\obj\Debug\net6.0\file1.csproj.CoreCompileInputs.cache
+C:\Users\ABerkey\Desktop\NeDL\file1\obj\Debug\net6.0\file1.dll
+C:\Users\ABerkey\Desktop\NeDL\file1\obj\Debug\net6.0\ref\file1.dll
+C:\Users\ABerkey\Desktop\NeDL\file1\obj\Debug\net6.0\file1.pdb
+C:\Users\ABerkey\Desktop\NeDL\file1\obj\Debug\net6.0\file1.genruntimeconfig.cache

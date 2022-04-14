@@ -1,0 +1,15 @@
+C:\Users\ABerkey\Desktop\NeDL\Cold-puter Science\bin\Debug\net6.0\Cold-puter Science.exe
+C:\Users\ABerkey\Desktop\NeDL\Cold-puter Science\bin\Debug\net6.0\Cold-puter Science.deps.json
+C:\Users\ABerkey\Desktop\NeDL\Cold-puter Science\bin\Debug\net6.0\Cold-puter Science.runtimeconfig.json
+C:\Users\ABerkey\Desktop\NeDL\Cold-puter Science\bin\Debug\net6.0\Cold-puter Science.dll
+C:\Users\ABerkey\Desktop\NeDL\Cold-puter Science\bin\Debug\net6.0\ref\Cold-puter Science.dll
+C:\Users\ABerkey\Desktop\NeDL\Cold-puter Science\bin\Debug\net6.0\Cold-puter Science.pdb
+C:\Users\ABerkey\Desktop\NeDL\Cold-puter Science\obj\Debug\net6.0\Cold-puter Science.csproj.AssemblyReference.cache
+C:\Users\ABerkey\Desktop\NeDL\Cold-puter Science\obj\Debug\net6.0\Cold-puter Science.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ABerkey\Desktop\NeDL\Cold-puter Science\obj\Debug\net6.0\Cold-puter Science.AssemblyInfoInputs.cache
+C:\Users\ABerkey\Desktop\NeDL\Cold-puter Science\obj\Debug\net6.0\Cold-puter Science.AssemblyInfo.cs
+C:\Users\ABerkey\Desktop\NeDL\Cold-puter Science\obj\Debug\net6.0\Cold-puter Science.csproj.CoreCompileInputs.cache
+C:\Users\ABerkey\Desktop\NeDL\Cold-puter Science\obj\Debug\net6.0\Cold-puter Science.dll
+C:\Users\ABerkey\Desktop\NeDL\Cold-puter Science\obj\Debug\net6.0\ref\Cold-puter Science.dll
+C:\Users\ABerkey\Desktop\NeDL\Cold-puter Science\obj\Debug\net6.0\Cold-puter Science.pdb
+C:\Users\ABerkey\Desktop\NeDL\Cold-puter Science\obj\Debug\net6.0\Cold-puter Science.genruntimeconfig.cache

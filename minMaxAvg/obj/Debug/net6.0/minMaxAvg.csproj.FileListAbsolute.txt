@@ -1,0 +1,15 @@
+C:\Users\ABerkey\Desktop\NeDL\minMaxAvg\obj\Debug\net6.0\minMaxAvg.csproj.AssemblyReference.cache
+C:\Users\ABerkey\Desktop\NeDL\minMaxAvg\obj\Debug\net6.0\minMaxAvg.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ABerkey\Desktop\NeDL\minMaxAvg\obj\Debug\net6.0\minMaxAvg.AssemblyInfoInputs.cache
+C:\Users\ABerkey\Desktop\NeDL\minMaxAvg\obj\Debug\net6.0\minMaxAvg.AssemblyInfo.cs
+C:\Users\ABerkey\Desktop\NeDL\minMaxAvg\obj\Debug\net6.0\minMaxAvg.csproj.CoreCompileInputs.cache
+C:\Users\ABerkey\Desktop\NeDL\minMaxAvg\bin\Debug\net6.0\minMaxAvg.exe
+C:\Users\ABerkey\Desktop\NeDL\minMaxAvg\bin\Debug\net6.0\minMaxAvg.deps.json
+C:\Users\ABerkey\Desktop\NeDL\minMaxAvg\bin\Debug\net6.0\minMaxAvg.runtimeconfig.json
+C:\Users\ABerkey\Desktop\NeDL\minMaxAvg\bin\Debug\net6.0\minMaxAvg.dll
+C:\Users\ABerkey\Desktop\NeDL\minMaxAvg\bin\Debug\net6.0\ref\minMaxAvg.dll
+C:\Users\ABerkey\Desktop\NeDL\minMaxAvg\bin\Debug\net6.0\minMaxAvg.pdb
+C:\Users\ABerkey\Desktop\NeDL\minMaxAvg\obj\Debug\net6.0\minMaxAvg.dll
+C:\Users\ABerkey\Desktop\NeDL\minMaxAvg\obj\Debug\net6.0\ref\minMaxAvg.dll
+C:\Users\ABerkey\Desktop\NeDL\minMaxAvg\obj\Debug\net6.0\minMaxAvg.pdb
+C:\Users\ABerkey\Desktop\NeDL\minMaxAvg\obj\Debug\net6.0\minMaxAvg.genruntimeconfig.cache

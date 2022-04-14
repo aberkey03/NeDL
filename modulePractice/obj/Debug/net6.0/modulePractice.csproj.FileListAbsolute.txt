@@ -1,0 +1,15 @@
+C:\Users\ABerkey\Desktop\NeDL\modulePractice\bin\Debug\net6.0\modulePractice.exe
+C:\Users\ABerkey\Desktop\NeDL\modulePractice\bin\Debug\net6.0\modulePractice.deps.json
+C:\Users\ABerkey\Desktop\NeDL\modulePractice\bin\Debug\net6.0\modulePractice.runtimeconfig.json
+C:\Users\ABerkey\Desktop\NeDL\modulePractice\bin\Debug\net6.0\modulePractice.dll
+C:\Users\ABerkey\Desktop\NeDL\modulePractice\bin\Debug\net6.0\ref\modulePractice.dll
+C:\Users\ABerkey\Desktop\NeDL\modulePractice\bin\Debug\net6.0\modulePractice.pdb
+C:\Users\ABerkey\Desktop\NeDL\modulePractice\obj\Debug\net6.0\modulePractice.csproj.AssemblyReference.cache
+C:\Users\ABerkey\Desktop\NeDL\modulePractice\obj\Debug\net6.0\modulePractice.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ABerkey\Desktop\NeDL\modulePractice\obj\Debug\net6.0\modulePractice.AssemblyInfoInputs.cache
+C:\Users\ABerkey\Desktop\NeDL\modulePractice\obj\Debug\net6.0\modulePractice.AssemblyInfo.cs
+C:\Users\ABerkey\Desktop\NeDL\modulePractice\obj\Debug\net6.0\modulePractice.csproj.CoreCompileInputs.cache
+C:\Users\ABerkey\Desktop\NeDL\modulePractice\obj\Debug\net6.0\modulePractice.dll
+C:\Users\ABerkey\Desktop\NeDL\modulePractice\obj\Debug\net6.0\ref\modulePractice.dll
+C:\Users\ABerkey\Desktop\NeDL\modulePractice\obj\Debug\net6.0\modulePractice.pdb
+C:\Users\ABerkey\Desktop\NeDL\modulePractice\obj\Debug\net6.0\modulePractice.genruntimeconfig.cache

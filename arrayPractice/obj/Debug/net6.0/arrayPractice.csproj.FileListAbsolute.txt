@@ -1,0 +1,15 @@
+C:\Users\ABerkey\Desktop\NeDL\arrayPractice\bin\Debug\net6.0\arrayPractice.exe
+C:\Users\ABerkey\Desktop\NeDL\arrayPractice\bin\Debug\net6.0\arrayPractice.deps.json
+C:\Users\ABerkey\Desktop\NeDL\arrayPractice\bin\Debug\net6.0\arrayPractice.runtimeconfig.json
+C:\Users\ABerkey\Desktop\NeDL\arrayPractice\bin\Debug\net6.0\arrayPractice.dll
+C:\Users\ABerkey\Desktop\NeDL\arrayPractice\bin\Debug\net6.0\ref\arrayPractice.dll
+C:\Users\ABerkey\Desktop\NeDL\arrayPractice\bin\Debug\net6.0\arrayPractice.pdb
+C:\Users\ABerkey\Desktop\NeDL\arrayPractice\obj\Debug\net6.0\arrayPractice.csproj.AssemblyReference.cache
+C:\Users\ABerkey\Desktop\NeDL\arrayPractice\obj\Debug\net6.0\arrayPractice.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ABerkey\Desktop\NeDL\arrayPractice\obj\Debug\net6.0\arrayPractice.AssemblyInfoInputs.cache
+C:\Users\ABerkey\Desktop\NeDL\arrayPractice\obj\Debug\net6.0\arrayPractice.AssemblyInfo.cs
+C:\Users\ABerkey\Desktop\NeDL\arrayPractice\obj\Debug\net6.0\arrayPractice.csproj.CoreCompileInputs.cache
+C:\Users\ABerkey\Desktop\NeDL\arrayPractice\obj\Debug\net6.0\arrayPractice.dll
+C:\Users\ABerkey\Desktop\NeDL\arrayPractice\obj\Debug\net6.0\ref\arrayPractice.dll
+C:\Users\ABerkey\Desktop\NeDL\arrayPractice\obj\Debug\net6.0\arrayPractice.pdb
+C:\Users\ABerkey\Desktop\NeDL\arrayPractice\obj\Debug\net6.0\arrayPractice.genruntimeconfig.cache
