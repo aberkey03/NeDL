@@ -248,6 +248,6 @@ namespace MyApplication
                 Console.WriteLine("Goodbye.");
             }
         } while (!(userChoiceString=="Q") && !(userChoiceString=="q"));
-    } //end main
+    } //end main, ended again
   } //end program
 } //end namespace
