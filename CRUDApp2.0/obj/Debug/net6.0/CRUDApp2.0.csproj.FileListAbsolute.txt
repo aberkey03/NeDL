@@ -1,0 +1,5 @@
+C:\Users\ABerkey\Desktop\NeDL\CRUDApp2.0\obj\Debug\net6.0\CRUDApp2.0.csproj.AssemblyReference.cache
+C:\Users\ABerkey\Desktop\NeDL\CRUDApp2.0\obj\Debug\net6.0\CRUDApp2.0.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ABerkey\Desktop\NeDL\CRUDApp2.0\obj\Debug\net6.0\CRUDApp2.0.AssemblyInfoInputs.cache
+C:\Users\ABerkey\Desktop\NeDL\CRUDApp2.0\obj\Debug\net6.0\CRUDApp2.0.AssemblyInfo.cs
+C:\Users\ABerkey\Desktop\NeDL\CRUDApp2.0\obj\Debug\net6.0\CRUDApp2.0.csproj.CoreCompileInputs.cache

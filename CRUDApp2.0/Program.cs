@@ -5,10 +5,10 @@ namespace MyApplication
 {
   class Program
   {
-    static int Search(string[] arr, string x)
+    static int search(string[] arr, string x)
     {
         int n = arr.Length;
-        for (int i =0; i<n; i++)
+        for (int i = 0; i<n;i++)
         {
             if (arr[i] == x)
                 return i;
@@ -109,22 +109,21 @@ namespace MyApplication
             else if (userChoiceString=="C" || userChoiceString=="c")
             {
                 Console.WriteLine("In the C/c area."); //repeated because there was 2 open spaces??
-                int spaceIndex;
+                int spaceIndex=0;
                 string newName;
                 bool spaceBool=false;
-                int foundIndex = -1;
                 
                 do{
-                    //for (index=0;index<nameArray.Length;index++)
-                    foundIndex=Search(nameArray,"");
+                    for (index=0;index<nameArray.Length;index++)
                     {
-                        if (foundIndex!=-1)
+                        if (nameArray[index]=="")
                         {
-                            Console.WriteLine("There is a blank space at " + foundIndex + " index.");
+                            spaceIndex=index;
+                            Console.WriteLine("There is a blank space at " + spaceIndex + " index.");
                             Console.WriteLine("Enter the new name to add.");
                             newName = Console.ReadLine();
-                            nameArray[foundIndex]=newName;
-                            Console.WriteLine($"{nameArray[foundIndex]} has been added at position {foundIndex}.");
+                            nameArray[spaceIndex]=newName;
+                            Console.WriteLine(nameArray[spaceIndex] + "Has been added at position " + spaceIndex + " index.");
                             spaceBool=true;
                         };
                     }  
@@ -133,7 +132,7 @@ namespace MyApplication
                             Console.WriteLine("There is no space in the array. Delete a name first.");
                             break;           
                         }
-                }while (foundIndex == -1);
+                }while (!spaceBool);
             }
         
         //if the option is R or r then print the array
@@ -147,89 +146,70 @@ namespace MyApplication
             }
         
         //if the option is U or u then update a name in the array (if it is there)
-        
             else if (userChoiceString=="U" || userChoiceString=="u")
             {
                 Console.WriteLine("In the U/u area.");
                 string currentName;
                 string newName;
-                int foundIndex = -1;
-                int numChanges =0;
+                int result = -1;
+                int [] arrPosition = new int {0};
                 //determine if name is in array
+                Console.WriteLine("Which name do you want to update?");
                 do
                 {
-                    Console.WriteLine("Enter the name you want to update. Or enter \"Cancel\" to return to the main menu.");
+                    //prompt for existing name to change
                     currentName=Console.ReadLine();
-                    //if user enters "Cancel", breaks out of the loop back to the main menu!
-                    if (currentName == "Cancel")
+                    result = search(nameArray,currentName);
+                    if (result !=-1)
                     {
-                        break;
+                        int [] arrPosition = new int {result};
                     }
-                    //if the user enters anything other than Cancel it searches again
-                    else
+
+                    if (result  ==-1)
                     {
-                        foundIndex = Search(nameArray,currentName);
-                        //if name is found, prmpt for new name
-                        if(foundIndex !=-1)
-                        {
-                            Console.WriteLine("Enter the new name.");
-                            newName=Console.ReadLine();
-                            //while the name is still found, update it
-                            while (foundIndex != -1)
-                            {
-                                //update name in array
-                                nameArray[foundIndex]=newName;
-                                //write the position it was updated
-                                Console.WriteLine($"{currentName} has been updated at position {foundIndex}");
-                                //track number of times it was updated
-                                numChanges++;
-                                //search again
-                                foundIndex = Search(nameArray,currentName);
-                            }
-                            //indicate how many times it was updated
-                            Console.WriteLine($"{currentName} has been updated to {newName} {numChanges} times.");
-                        }
-                        //if name not found
-                        else if (foundIndex == -1)
-                            {
-                                Console.WriteLine($"{currentName} not found. Which name do you want to update?");
-                            };
+                        Console.WriteLine($"{currentName} not found. Which name do you want to update?");
                     }
-                }while (currentName!="Cancel");
+                }while(result == -1);
+                Console.WriteLine("Name found. Enter new name.");
+                newName=Console.ReadLine();
+                foreach (int result in arrPosition)
+                {
+                    nameArray[result]=newName;
+                }
+                Console.WriteLine($"{currentName} has been updated to {newName} {arrPosition.Length} times.");
             }
-            
         
         //else if the option is D or d then delete a name in the array (if it is there)
             else if (userChoiceString=="D" || userChoiceString=="d")
             {
                 Console.WriteLine("In the D/d area.");
                 string deleteName;
-                int foundIndex=-1;
-                bool deleted = false;
-
+                bool nameFound=false;
                 //determine if name is in array
                 Console.WriteLine("Which name do you want to delete?");
-                
-                //prompt for existing name to change
-                deleteName=Console.ReadLine();
-                foundIndex=Search(nameArray,deleteName);
-                for (int i=0;i<nameArray.Length;i++)
+                do
+                {
+                    //prompt for existing name to change
+                    deleteName=Console.ReadLine();
+                    for (index =0;index<10;index++)
                     {
-                        if (foundIndex!=-1)
+                        if (nameArray[index]==deleteName)
                         {
-                            Console.WriteLine($"{deleteName} is at postion {foundIndex}.");
+                            nameFound=true;
+                            Console.WriteLine($"{deleteName} is at postion {index}.");
                             //update name in array
-                            nameArray[foundIndex]="";
-                            Console.WriteLine($"{deleteName} has been deleted from position {foundIndex}.");
-                            foundIndex=Search(nameArray,deleteName);
-                            deleted=true;
+                            nameArray[index]="";
+                            Console.WriteLine($"{deleteName} has been deleted from position {index}.");
+                            break;
                         }
                     }
-                if (foundIndex==-1 && deleted==false)
+                    if (nameFound==false)
                     {
                         Console.WriteLine($"{deleteName} not found. Which name do you want to delete?");
-                    }; 
+                    };
+                }while(!(nameFound));
             }
+        
         //else if the option is Q or q then quit the program 
             else 
             {

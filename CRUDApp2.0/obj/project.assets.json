@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ABerkey\\Desktop\\NeDL\\CRUDapp\\CRUDapp.csproj",
-      "projectName": "CRUDapp",
-      "projectPath": "C:\\Users\\ABerkey\\Desktop\\NeDL\\CRUDapp\\CRUDapp.csproj",
+      "projectUniqueName": "C:\\Users\\ABerkey\\Desktop\\NeDL\\CRUDApp2.0\\CRUDApp2.0.csproj",
+      "projectName": "CRUDApp2.0",
+      "projectPath": "C:\\Users\\ABerkey\\Desktop\\NeDL\\CRUDApp2.0\\CRUDApp2.0.csproj",
       "packagesPath": "C:\\Users\\ABerkey\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ABerkey\\Desktop\\NeDL\\CRUDapp\\obj\\",
+      "outputPath": "C:\\Users\\ABerkey\\Desktop\\NeDL\\CRUDApp2.0\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ABerkey\\AppData\\Roaming\\NuGet\\NuGet.Config",
