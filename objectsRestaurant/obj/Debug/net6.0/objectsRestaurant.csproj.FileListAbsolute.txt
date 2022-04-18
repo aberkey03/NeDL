@@ -1,0 +1,15 @@
+C:\Users\ABerkey\Desktop\NeDL\objectsRestaurant\obj\Debug\net6.0\objectsRestaurant.csproj.AssemblyReference.cache
+C:\Users\ABerkey\Desktop\NeDL\objectsRestaurant\obj\Debug\net6.0\objectsRestaurant.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ABerkey\Desktop\NeDL\objectsRestaurant\obj\Debug\net6.0\objectsRestaurant.AssemblyInfoInputs.cache
+C:\Users\ABerkey\Desktop\NeDL\objectsRestaurant\obj\Debug\net6.0\objectsRestaurant.AssemblyInfo.cs
+C:\Users\ABerkey\Desktop\NeDL\objectsRestaurant\obj\Debug\net6.0\objectsRestaurant.csproj.CoreCompileInputs.cache
+C:\Users\ABerkey\Desktop\NeDL\objectsRestaurant\bin\Debug\net6.0\objectsRestaurant.exe
+C:\Users\ABerkey\Desktop\NeDL\objectsRestaurant\bin\Debug\net6.0\objectsRestaurant.deps.json
+C:\Users\ABerkey\Desktop\NeDL\objectsRestaurant\bin\Debug\net6.0\objectsRestaurant.runtimeconfig.json
+C:\Users\ABerkey\Desktop\NeDL\objectsRestaurant\bin\Debug\net6.0\objectsRestaurant.dll
+C:\Users\ABerkey\Desktop\NeDL\objectsRestaurant\bin\Debug\net6.0\ref\objectsRestaurant.dll
+C:\Users\ABerkey\Desktop\NeDL\objectsRestaurant\bin\Debug\net6.0\objectsRestaurant.pdb
+C:\Users\ABerkey\Desktop\NeDL\objectsRestaurant\obj\Debug\net6.0\objectsRestaurant.dll
+C:\Users\ABerkey\Desktop\NeDL\objectsRestaurant\obj\Debug\net6.0\ref\objectsRestaurant.dll
+C:\Users\ABerkey\Desktop\NeDL\objectsRestaurant\obj\Debug\net6.0\objectsRestaurant.pdb
+C:\Users\ABerkey\Desktop\NeDL\objectsRestaurant\obj\Debug\net6.0\objectsRestaurant.genruntimeconfig.cache

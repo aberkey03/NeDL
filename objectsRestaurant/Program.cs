@@ -54,12 +54,15 @@ namespace MyApplication
     }
     static void Main(string[] args)
     {
-        string[] nameArray = new string[10];
-
         // DECLARE vARRIABLES
         bool userChoice;
         string userChoiceString;
         int arrayLength = 25;
+        Restaurant[] restaurantArray=new Restaurant[arrayLength];
+        for (int i = 0; i < restaurantArray.Length; i++)
+        {
+            restaurantArray[i]= new Restaurant();
+        }
         string[] restName = new string[arrayLength];
         string[] restRate = new string[arrayLength];
         Console.WriteLine(restName.Length);
@@ -109,16 +112,16 @@ namespace MyApplication
                 using (StreamReader sr = File.OpenText(fileName))
                 {
                     string rName = "";
-                    string rRate = "";
+                    int rRate = -1;
                     Console.WriteLine($"Here is the content of the file {fileName}: ");
                     while ((rName = sr.ReadLine()) != null)
                     {
                         Console.WriteLine(rName);
-                        restName[index]=rName;
+                        restaurantArray[index].RName=rName;
                         
-                        rRate=sr.ReadLine();
+                        rRate=Convert.ToInt16(sr.ReadLine());
                         Console.WriteLine(rRate);
-                        restRate[index]=rRate;
+                        restaurantArray[index].RRate=rRate;
                         
                         index=index+1;
                         if (index==arrayLength)
@@ -171,7 +174,7 @@ namespace MyApplication
                 Console.WriteLine("In the C/c area."); 
                 int spaceIndex;
                 string rName;
-                string rRate;
+                int rRate;
                 bool spaceBool=false;
                 int foundIndex = -1;
                 //bool e = false;
@@ -191,18 +194,18 @@ namespace MyApplication
                                 Console.WriteLine("There is a blank space.");
                                 Console.WriteLine("Enter the new restaurant to add.");
                                 rName = Console.ReadLine();
-                                restName[foundIndex]=rName;
+                                restaurantArray[foundIndex].RName=rName;
                                 Console.WriteLine($"Enter the rating (0-5) for {rName}.");
                                 // validate rating 0-5
-                                rRate = Convert.ToString(GetValidInt(6,-1));
+                                rRate = GetValidInt(6,-1);
                                 //rRate = Console.ReadLine();
-                                restRate[foundIndex]=rRate;
+                                restaurantArray[foundIndex].RRate=rRate;
                                 spaceBool=true;
                             };
                         }  
                         if (spaceBool==false)
                             {
-                                Console.WriteLine("There is no space in the array. Delete a restaurant first.");
+                                Console.WriteLine("There is no space. Delete a restaurant first.");
                                 break;           
                             }
                     }while (foundIndex == -1);
@@ -223,10 +226,15 @@ namespace MyApplication
                 //{
                     for (index =0;index<arrayLength;index++)
                     {
-                        if (restName[index]!=""&& restName[index] != null)
+                        if (restaurantArray[index].RRate!=-1)
                         {
-                            Console.WriteLine($"{restName[index]} is rated {restRate[index]}.");
+                            Console.WriteLine(restaurantArray[index].ToString());
                         }
+                        
+                        //if (restName[index]!=""&& restName[index] != null)
+                        //{
+                            //Console.WriteLine($"{restName[index]} is rated {restRate[index]}.");
+                        //}
                     }
                 //}
             }
