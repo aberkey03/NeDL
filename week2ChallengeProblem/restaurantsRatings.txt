@@ -1,0 +1,14 @@
+MCDONALD'S;ok
+STARBUCKS;bad
+SUBWAY;good
+TACO-BELL;fair
+CHICK-FIL-A;bad
+WENDY'S;ok
+BURGER-KING;good
+DUNKIN';ok
+DOMINO'S;bad
+PANERA-BREAD;good
+Pizza-Hut;ok
+
+
+LONG-JOHN-SILVERS;terrible 

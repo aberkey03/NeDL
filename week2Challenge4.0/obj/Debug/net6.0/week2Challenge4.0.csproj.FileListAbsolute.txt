@@ -1,0 +1,15 @@
+C:\Users\ABerkey\Desktop\NeDL\week2Challenge4.0\bin\Debug\net6.0\week2Challenge4.0.exe
+C:\Users\ABerkey\Desktop\NeDL\week2Challenge4.0\bin\Debug\net6.0\week2Challenge4.0.deps.json
+C:\Users\ABerkey\Desktop\NeDL\week2Challenge4.0\bin\Debug\net6.0\week2Challenge4.0.runtimeconfig.json
+C:\Users\ABerkey\Desktop\NeDL\week2Challenge4.0\bin\Debug\net6.0\week2Challenge4.0.dll
+C:\Users\ABerkey\Desktop\NeDL\week2Challenge4.0\bin\Debug\net6.0\ref\week2Challenge4.0.dll
+C:\Users\ABerkey\Desktop\NeDL\week2Challenge4.0\bin\Debug\net6.0\week2Challenge4.0.pdb
+C:\Users\ABerkey\Desktop\NeDL\week2Challenge4.0\obj\Debug\net6.0\week2Challenge4.0.csproj.AssemblyReference.cache
+C:\Users\ABerkey\Desktop\NeDL\week2Challenge4.0\obj\Debug\net6.0\week2Challenge4.0.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ABerkey\Desktop\NeDL\week2Challenge4.0\obj\Debug\net6.0\week2Challenge4.0.AssemblyInfoInputs.cache
+C:\Users\ABerkey\Desktop\NeDL\week2Challenge4.0\obj\Debug\net6.0\week2Challenge4.0.AssemblyInfo.cs
+C:\Users\ABerkey\Desktop\NeDL\week2Challenge4.0\obj\Debug\net6.0\week2Challenge4.0.csproj.CoreCompileInputs.cache
+C:\Users\ABerkey\Desktop\NeDL\week2Challenge4.0\obj\Debug\net6.0\week2Challenge4.0.dll
+C:\Users\ABerkey\Desktop\NeDL\week2Challenge4.0\obj\Debug\net6.0\ref\week2Challenge4.0.dll
+C:\Users\ABerkey\Desktop\NeDL\week2Challenge4.0\obj\Debug\net6.0\week2Challenge4.0.pdb
+C:\Users\ABerkey\Desktop\NeDL\week2Challenge4.0\obj\Debug\net6.0\week2Challenge4.0.genruntimeconfig.cache
