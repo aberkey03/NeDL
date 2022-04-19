@@ -7,8 +7,7 @@ namespace MyApplication
   {
     static int Search(string[] arr, int arrLength, string x, string y)
     {
-        int n = arrLength;
-        for (int i =0; i<n; i++)
+        for (int i =0; i<arrLength; i++)
         {
             if ((arr[i] == x) || (arr[i] == y))
                 return i;
