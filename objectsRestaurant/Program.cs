@@ -65,9 +65,10 @@ namespace MyApplication
         }
         string[] restName = new string[arrayLength];
         string[] restRate = new string[arrayLength];
-        Console.WriteLine(restName.Length);
+        
         int index = 0; //this is the index for the array
         string fileName = "restaurantRatings.txt";
+
         //repeat the main loop until Q is entered 
         do
         {
@@ -137,14 +138,14 @@ namespace MyApplication
             else if (userChoiceString=="S" || userChoiceString=="s")
             {
                 Console.WriteLine("In the S/s area.");
-                bool e=false;
-                IsEmpty(restName,e);
-                if (e==false)
-                {
-                    Console.WriteLine("There are not restaurants or ratings on the list. Add a restaurant before saving the file.");
-                }
-                else
-                {
+                //bool e=false;
+                //IsEmpty(restName,e);
+                //if (e==false)
+                //{
+                //    Console.WriteLine("There are not restaurants or ratings on the list. Add a restaurant before saving the file.");
+                //}
+                //else
+                //{
                     // Delete the file if it exists.
                     if (File.Exists(fileName))
                     {
@@ -155,17 +156,17 @@ namespace MyApplication
                     using (StreamWriter fileStr = File.CreateText(fileName)) 
                     {
                         string rName = "";
-                        string rRate = "";
-                        for (index=0;index<restName.Length;index++)
+                        int rRate = -1;
+                        for (index=0;index<restaurantArray.Length;index++)
                         {
-                            if ((rName = restName[index]) != "" && (rName = restName[index]) != null)
-                            fileStr.WriteLine(restName[index]);
-                            if ((rRate = restRate[index]) != "" && (rRate = restRate[index]) != null)
-                            fileStr.WriteLine(restRate[index]);
+                            if ((rName = restaurantArray[index].RName)!=null)
+                            fileStr.WriteLine(restaurantArray[index].RName);
+                            if ((rRate = restaurantArray[index].RRate)!=-1)
+                            fileStr.WriteLine(restaurantArray[index].RRate);
                         }
                     }
                     Console.WriteLine(fileName + " has been saved.");
-                }
+                //}
             }
         
          // else if the option is C or c then add a name to the array of strings (if there is room)
@@ -198,7 +199,6 @@ namespace MyApplication
                                 Console.WriteLine($"Enter the rating (0-5) for {rName}.");
                                 // validate rating 0-5
                                 rRate = GetValidInt(6,-1);
-                                //rRate = Console.ReadLine();
                                 restaurantArray[foundIndex].RRate=rRate;
                                 spaceBool=true;
                             };
@@ -230,11 +230,6 @@ namespace MyApplication
                         {
                             Console.WriteLine(restaurantArray[index].ToString());
                         }
-                        
-                        //if (restName[index]!=""&& restName[index] != null)
-                        //{
-                            //Console.WriteLine($"{restName[index]} is rated {restRate[index]}.");
-                        //}
                     }
                 //}
             }
