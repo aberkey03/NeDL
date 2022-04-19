@@ -1,0 +1,15 @@
+C:\Users\ABerkey\Desktop\NeDL\objectsSWCCG\bin\Debug\net6.0\objectsSWCCG.exe
+C:\Users\ABerkey\Desktop\NeDL\objectsSWCCG\bin\Debug\net6.0\objectsSWCCG.deps.json
+C:\Users\ABerkey\Desktop\NeDL\objectsSWCCG\bin\Debug\net6.0\objectsSWCCG.runtimeconfig.json
+C:\Users\ABerkey\Desktop\NeDL\objectsSWCCG\bin\Debug\net6.0\objectsSWCCG.dll
+C:\Users\ABerkey\Desktop\NeDL\objectsSWCCG\bin\Debug\net6.0\ref\objectsSWCCG.dll
+C:\Users\ABerkey\Desktop\NeDL\objectsSWCCG\bin\Debug\net6.0\objectsSWCCG.pdb
+C:\Users\ABerkey\Desktop\NeDL\objectsSWCCG\obj\Debug\net6.0\objectsSWCCG.csproj.AssemblyReference.cache
+C:\Users\ABerkey\Desktop\NeDL\objectsSWCCG\obj\Debug\net6.0\objectsSWCCG.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ABerkey\Desktop\NeDL\objectsSWCCG\obj\Debug\net6.0\objectsSWCCG.AssemblyInfoInputs.cache
+C:\Users\ABerkey\Desktop\NeDL\objectsSWCCG\obj\Debug\net6.0\objectsSWCCG.AssemblyInfo.cs
+C:\Users\ABerkey\Desktop\NeDL\objectsSWCCG\obj\Debug\net6.0\objectsSWCCG.csproj.CoreCompileInputs.cache
+C:\Users\ABerkey\Desktop\NeDL\objectsSWCCG\obj\Debug\net6.0\objectsSWCCG.dll
+C:\Users\ABerkey\Desktop\NeDL\objectsSWCCG\obj\Debug\net6.0\ref\objectsSWCCG.dll
+C:\Users\ABerkey\Desktop\NeDL\objectsSWCCG\obj\Debug\net6.0\objectsSWCCG.pdb
+C:\Users\ABerkey\Desktop\NeDL\objectsSWCCG\obj\Debug\net6.0\objectsSWCCG.genruntimeconfig.cache
