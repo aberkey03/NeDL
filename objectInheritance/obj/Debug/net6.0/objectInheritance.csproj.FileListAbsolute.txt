@@ -1,0 +1,15 @@
+C:\Users\ABerkey\Desktop\NeDL\objectInheritance\obj\Debug\net6.0\objectInheritance.csproj.AssemblyReference.cache
+C:\Users\ABerkey\Desktop\NeDL\objectInheritance\obj\Debug\net6.0\objectInheritance.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ABerkey\Desktop\NeDL\objectInheritance\obj\Debug\net6.0\objectInheritance.AssemblyInfoInputs.cache
+C:\Users\ABerkey\Desktop\NeDL\objectInheritance\obj\Debug\net6.0\objectInheritance.AssemblyInfo.cs
+C:\Users\ABerkey\Desktop\NeDL\objectInheritance\obj\Debug\net6.0\objectInheritance.csproj.CoreCompileInputs.cache
+C:\Users\ABerkey\Desktop\NeDL\objectInheritance\bin\Debug\net6.0\objectInheritance.exe
+C:\Users\ABerkey\Desktop\NeDL\objectInheritance\bin\Debug\net6.0\objectInheritance.deps.json
+C:\Users\ABerkey\Desktop\NeDL\objectInheritance\bin\Debug\net6.0\objectInheritance.runtimeconfig.json
+C:\Users\ABerkey\Desktop\NeDL\objectInheritance\bin\Debug\net6.0\objectInheritance.dll
+C:\Users\ABerkey\Desktop\NeDL\objectInheritance\bin\Debug\net6.0\ref\objectInheritance.dll
+C:\Users\ABerkey\Desktop\NeDL\objectInheritance\bin\Debug\net6.0\objectInheritance.pdb
+C:\Users\ABerkey\Desktop\NeDL\objectInheritance\obj\Debug\net6.0\objectInheritance.dll
+C:\Users\ABerkey\Desktop\NeDL\objectInheritance\obj\Debug\net6.0\ref\objectInheritance.dll
+C:\Users\ABerkey\Desktop\NeDL\objectInheritance\obj\Debug\net6.0\objectInheritance.pdb
+C:\Users\ABerkey\Desktop\NeDL\objectInheritance\obj\Debug\net6.0\objectInheritance.genruntimeconfig.cache
