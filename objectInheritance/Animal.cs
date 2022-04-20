@@ -8,17 +8,17 @@ namespace CollectionApp
       public string species;
       public string sound;
 
-      public Animal(int aWeight, string aSpecies)
+      public Animal(int aWeight, string aSpecies) 
       {
           weight = aWeight;
           species = aSpecies;
       }
-      public Animal ()
+      public Animal () //default constructor 
       {
           weight = -1;
           species = null;
       }
-      public void MakeSound()
+      public void MakeSound() //accessible by all sub classes
       {
           Console.WriteLine($"The {species} goes {sound}");
       }
