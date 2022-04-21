@@ -39,7 +39,7 @@ namespace EmployeeBonuses
             Console.WriteLine(""); */
 
             // initialize array of Employees
-            Employee [] employeeArray = new Employee [20];
+            //Employee [] employeeArray = new Employee [20];
             
             /* initial class testing
             employeeArray[0] = testEmployee2;
@@ -60,8 +60,8 @@ namespace EmployeeBonuses
             string userChoiceString; //main menue entry
             bool userChoice;  //flag for valid main menue entry
             string fileName = "employees.txt";
-            int numHourlyEmployees = 10;
-            int numSalaryEmployees = 10;
+            int numHourlyEmployees = 3;
+            int numSalaryEmployees = 3;
 
             HourlyEmployee [] hourlyEmployeeArray = new HourlyEmployee [numHourlyEmployees];
             SalaryEmployee [] salaryEmployeeArray = new SalaryEmployee [numSalaryEmployees];
@@ -105,63 +105,40 @@ namespace EmployeeBonuses
                     Console.WriteLine("In the L/l area.");
                     using (StreamReader sr = File.OpenText(fileName))
                     {
-                        int index = 0; //array index
-                        string lastName;
-                        string firstName;
+                        string lastName; //employee lastname
+                        string firstName; //employee firstname
                         char employeeType;
+                        int hourlyIndex = 0; //hourlyEmployeeArray index
+                        int salaryIndex = 0; //salaryEmployeeArray index
 
                         Console.WriteLine($"Here is the content of the file {fileName}:");
                         while ((lastName = sr.ReadLine()) != null) //sets first line of the file to lastName
                         {
-                            //lastName = sr.ReadLine();
                             Console.WriteLine(lastName);
-
                             firstName = sr.ReadLine(); //sets the second line of the file to firstName
                             Console.WriteLine(firstName);
-
                             employeeType = Convert.ToChar(sr.ReadLine()); //sets the third line of the file to employeeType
                             Console.WriteLine(employeeType);
-
+                            // determine employee type
                             if (employeeType == 'S')
                             {
                                 int salary = Convert.ToInt32(sr.ReadLine());  //if salary, sets fourth line of the file to salary
                                 Console.WriteLine(salary);
-                                salaryEmployeeArray[index] = new SalaryEmployee (lastName, firstName, employeeType, salary);
+                                salaryEmployeeArray[salaryIndex] = new SalaryEmployee (lastName, firstName, employeeType, salary);
+                                salaryIndex++;
                             }
                             else if (employeeType == 'H')
                             {
                                 double hourlyRate = Convert.ToDouble(sr.ReadLine()); //else if hourly, sets fourth line of the file to hourlyRate
                                 Console.WriteLine(hourlyRate);
-                                hourlyEmployeeArray[index] = new HourlyEmployee (lastName, firstName, employeeType, hourlyRate);
-                            }
-                            /* //cant use with 2 arrays, shouldnt be an issue as long as data file is correct
-                            index++;
-                            if (index==employeeArray.Length)
-                            {
-                                break;
-                            } */
+                                hourlyEmployeeArray[hourlyIndex] = new HourlyEmployee (lastName, firstName, employeeType, hourlyRate);
+                                hourlyIndex++;
+                            }  
                         }
                     }
-                    /* original CRUD
-                    using (StreamReader sr = File.OpenText(fileName))
-                    {
-                        string s = "";
-                        Console.WriteLine($"Here is the content of the file {fileName}:");
-                        while ((s = sr.ReadLine()) != null)
-                        {
-                            Console.WriteLine(s);
-                            nameArray[index]=s;
-                            index=index+1;
-                            if (index==10)
-                            {
-                                break;
-                            }
-                        }
-                        Console.WriteLine("");
-                    } */
                 }
 
-                //else if the option is S or s then store the array of strings into the text file
+                //else if the option is S or s then store the array into the text file
                 else if (userChoiceString=="S" || userChoiceString=="s")
                 {
                     Console.WriteLine("In the S/s area.");
@@ -175,6 +152,7 @@ namespace EmployeeBonuses
                     // Create the file.
                     using (StreamWriter fileStr = File.CreateText(fileName)) 
                     {
+                        //loop through hourlyEmployeeArray
                         for (int index = 0; index < hourlyEmployeeArray.Length; index++)
                         {
                             if (hourlyEmployeeArray[index] != null)
@@ -185,6 +163,7 @@ namespace EmployeeBonuses
                                 fileStr.WriteLine(hourlyEmployeeArray[index].HourlyRate); //HourlyRate does not exist for Employee class
                             }
                         }
+                        //loop through salaryEmployeeArray
                         for (int index = 0; index < salaryEmployeeArray.Length; index++)
                         {
                             if (salaryEmployeeArray[index] != null)
@@ -197,23 +176,6 @@ namespace EmployeeBonuses
                         }
                     }
                     Console.WriteLine(fileName + " has been saved.");
-
-                    /* original CRUD
-                    // Delete the file if it exists.
-                    if (File.Exists(fileName))
-                    {
-                        File.Delete(fileName);
-                    }
-                            
-                    // Create the file.
-                    using (StreamWriter fileStr = File.CreateText(fileName)) 
-                    {
-                        for (index=0;index<nameArray.Length;index++)
-                        {
-                            fileStr.WriteLine(nameArray[index]);
-                        }
-                    }
-                    Console.WriteLine(fileName + " has been saved."); */
                 }
 
                 //if the option is C or c then add a name to the array of strings (if there is room)
@@ -221,11 +183,22 @@ namespace EmployeeBonuses
                 {
                     Console.WriteLine("In the C/c area."); 
 
-                    bool spaceBool=false;
+                    bool space = false; //if space is found, spaceBool is set to true and the loop ends
+                    bool validChoice;
+                    char newEmplpoyeeType;
+
+                    do{
+                        validChoice = false;
+                        Console.WriteLine("Enter 'S' to add a salary employee, or enter 'H' to add a hourly employee.");
+                        newEmplpoyeeType = Convert.ToChar(Console.ReadLine());
+                        validChoice = (newEmplpoyeeType=='H'||newEmplpoyeeType=='S');
+                        if (!validChoice) //if not valid, tell the user to enter a valid chocie
+                        {
+                            Console.WriteLine("Please enter a valid option");
+                        }
+                    } while (!validChoice);
                     
                     do{
-                        Console.WriteLine("Enter 'S' to add a salary employee, or enter 'H' to add a hourly employee.");
-                        char newEmplpoyeeType = Convert.ToChar(Console.ReadLine());
                         if (newEmplpoyeeType == 'S')
                             {
                                 for (int index = 0 ; index < salaryEmployeeArray.Length;index++)
@@ -249,11 +222,11 @@ namespace EmployeeBonuses
                                         Console.WriteLine(salaryEmployeeArray[index]);
                                         Console.WriteLine();
                                         
-                                        spaceBool=true;
+                                        space=true;
                                         break;
                                     } 
                                 };
-                                if (spaceBool==false)
+                                if (space==false)
                                 {
                                     Console.WriteLine("There is no space in the array. Delete an employee first.");
                                     break;           
@@ -282,37 +255,41 @@ namespace EmployeeBonuses
                                         Console.WriteLine(hourlyEmployeeArray[index]);
                                         Console.WriteLine();
                                         
-                                        spaceBool=true;
+                                        space=true;
                                         break;
                                     } 
                                 };
-                                if (spaceBool==false)
+                                if (space==false)
                                 {
                                     Console.WriteLine("There is no space in the array. Delete an employee first.");
                                     break;           
                                 }
                             }  
                         
-                    }while (!spaceBool); 
+                    }while (!space); 
                 }
 
                 //if the option is R or r then print the array
                 else if (userChoiceString=="R" || userChoiceString=="r")
                 {
                     Console.WriteLine("In the R/r area.");
+                    
+                    Console.WriteLine("Hourly employees:");
                     //loop through array and print only those with data
                     for (int index = 0; index < hourlyEmployeeArray.Length; index++)
                     {
                         if(!(hourlyEmployeeArray[index]==null))
                         {
-                            Console.WriteLine("Hourly employees:");
                             Console.WriteLine(hourlyEmployeeArray[index]);
                         }
+                    }
+                    Console.WriteLine("Salary employees:");
+                    for (int index = 0; index < salaryEmployeeArray.Length; index++)
+                    {
                         if(!(salaryEmployeeArray[index]==null))
-                        {
-                            Console.WriteLine("Hourly employees:");
-                            Console.WriteLine(salaryEmployeeArray[index]);
-                        }
+                            {
+                                Console.WriteLine(salaryEmployeeArray[index]);
+                            }
                     }
                 }
         
@@ -387,8 +364,6 @@ namespace EmployeeBonuses
                 }
 
             } while (!(userChoiceString=="Q") && !(userChoiceString=="q"));
-
-
         }  //end main
     }  //end program
 }  //end namespace
