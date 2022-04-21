@@ -7,7 +7,7 @@ namespace EmployeeBonuses
     {
         static void Main (string[] args)
         {
-           //test individual class constructors and ToStrings
+           /* //test individual class constructors and ToStrings
 
             //test empty Employee Constructor
             Employee testEmployee1 = new Employee();
@@ -34,12 +34,12 @@ namespace EmployeeBonuses
             Console.WriteLine(testSalaryEmployee2);
             
             //write blank line to seperate testing
-            Console.WriteLine("");
+            Console.WriteLine(""); */
 
             // initialize array of Employees
             Employee [] employeeArray = new Employee [20];
             
-            employeeArray[0] = testEmployee2;
+            /* employeeArray[0] = testEmployee2;
             employeeArray[1] = testHourlyEmployee2;
             employeeArray[3] = testSalaryEmployee2;
 
@@ -51,11 +51,12 @@ namespace EmployeeBonuses
                 {
                     Console.WriteLine(employeeArray[index]);
                 }
-            }
+            } */
             
             //initialize main variables 
             string userChoiceString; //main menue entry
             bool userChoice;  //flag for valid main menue entry
+            string fileName = "employees.txt";
 
 
             do //main loop, continues until Q is entered 
@@ -94,11 +95,51 @@ namespace EmployeeBonuses
                 if (userChoiceString=="L" || userChoiceString=="l")
                 {
                     Console.WriteLine("In the L/l area.");
-                    /* index=0;
+                    using (StreamReader sr = File.OpenText(fileName))
+                    {
+                        //string s = ""; //control string
+                        int index = 0; //array index
+                        string lastName;
+                        string firstName;
+                        char employeeType;
+
+                        Console.WriteLine($"Here is the content of the file {fileName}:");
+                        while ((lastName = sr.ReadLine()) != null)
+                        {
+                            //lastName = sr.ReadLine();
+                            Console.WriteLine(lastName);
+
+                            firstName = sr.ReadLine();
+                            Console.WriteLine(firstName);
+
+                            employeeType = Convert.ToChar(sr.ReadLine());
+                            Console.WriteLine(employeeType);
+
+                            if (employeeType == 'S')
+                            {
+                                int salary = Convert.ToInt32(sr.ReadLine());
+                                Console.WriteLine(salary);
+                                employeeArray[index] = new SalaryEmployee (lastName, firstName, employeeType, salary);
+                            }
+                            else if (employeeType == 'H')
+                            {
+                                double hourlyRate = Convert.ToDouble(sr.ReadLine());
+                                Console.WriteLine(hourlyRate);
+                                employeeArray[index] = new HourlyEmployee (lastName, firstName, employeeType, hourlyRate);
+                            }
+                            
+                            index++;
+                            if (index==employeeArray.Length)
+                            {
+                                break;
+                            }
+                        }
+                    }
+                    /* 
                     using (StreamReader sr = File.OpenText(fileName))
                     {
                         string s = "";
-                        Console.WriteLine("Here is the content of the file mytest.txt: ");
+                        Console.WriteLine($"Here is the content of the file {fileName}:");
                         while ((s = sr.ReadLine()) != null)
                         {
                             Console.WriteLine(s);
@@ -138,8 +179,7 @@ namespace EmployeeBonuses
                 else if (userChoiceString=="C" || userChoiceString=="c")
                 {
                     Console.WriteLine("In the C/c area."); 
-                    //int spaceIndex=0;
-                    //string newName;
+
                     bool spaceBool=false;
                     
                     do{
@@ -147,8 +187,6 @@ namespace EmployeeBonuses
                         {
                             if (employeeArray[index]==null)
                             {
-                                //spaceIndex=index;
-
                                 //confirm there is a blank space in the array
                                 Console.WriteLine("There is a blank space at position " + index + ".");
                                 
@@ -158,7 +196,7 @@ namespace EmployeeBonuses
                                 //get FirstName
                                 Console.WriteLine("Enter the new employee's first name.");
                                 string newEmployeeFirstName = Console.ReadLine();
-                                
+                                //determine if hourly or salary
                                 Console.WriteLine("Enter the new employee's employee type (H or S).");
                                 char newEmplpoyeeType = Convert.ToChar(Console.ReadLine());
                                 if (newEmplpoyeeType == 'S')
@@ -179,8 +217,6 @@ namespace EmployeeBonuses
                                     Console.WriteLine(employeeArray[index]);
                                     Console.WriteLine();
                                 }
-                                //employeeArray[index]=newName;
-                                //Console.WriteLine(employeeArray[index] + "Has been added at position " + index + ".");
                                 spaceBool=true;
                                 break;
                             };

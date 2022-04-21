@@ -1,0 +1,8 @@
+Salary
+Test1
+S
+80000
+Hourly
+Test2
+H
+20.00
