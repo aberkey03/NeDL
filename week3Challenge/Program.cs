@@ -45,11 +45,11 @@ namespace EmployeeBonuses
 
             //loop through array and print only those with data
             //reuse for R
-            for (int i = 0; i < employeeArray.Length; i++)
+            for (int index = 0; index < employeeArray.Length; index++)
             {
-                if(!(employeeArray[i]==null))
+                if(!(employeeArray[index]==null))
                 {
-                    Console.WriteLine(employeeArray[i]);
+                    Console.WriteLine(employeeArray[index]);
                 }
             }
             
@@ -137,31 +137,60 @@ namespace EmployeeBonuses
                 //if the option is C or c then add a name to the array of strings (if there is room)
                 else if (userChoiceString=="C" || userChoiceString=="c")
                 {
-                    Console.WriteLine("In the C/c area."); //repeated because there was 2 open spaces??
-                    /* int spaceIndex=0;
-                    string newName;
+                    Console.WriteLine("In the C/c area."); 
+                    //int spaceIndex=0;
+                    //string newName;
                     bool spaceBool=false;
                     
                     do{
-                        for (index=0;index<nameArray.Length;index++)
+                        for (int index = 0 ; index < employeeArray.Length;index++)
                         {
-                            if (nameArray[index]=="")
+                            if (employeeArray[index]==null)
                             {
-                                spaceIndex=index;
-                                Console.WriteLine("There is a blank space at " + spaceIndex + " index.");
-                                Console.WriteLine("Enter the new name to add.");
-                                newName = Console.ReadLine();
-                                nameArray[spaceIndex]=newName;
-                                Console.WriteLine(nameArray[spaceIndex] + "Has been added at position " + spaceIndex + " index.");
+                                //spaceIndex=index;
+
+                                //confirm there is a blank space in the array
+                                Console.WriteLine("There is a blank space at position " + index + ".");
+                                
+                                //get LastName
+                                Console.WriteLine("Enter the new employee's last name.");
+                                string newEmployeeLastName = Console.ReadLine();
+                                //get FirstName
+                                Console.WriteLine("Enter the new employee's first name.");
+                                string newEmployeeFirstName = Console.ReadLine();
+                                
+                                Console.WriteLine("Enter the new employee's employee type (H or S).");
+                                char newEmplpoyeeType = Convert.ToChar(Console.ReadLine());
+                                if (newEmplpoyeeType == 'S')
+                                {
+                                    Console.WriteLine("Enter the new employee's salary.");
+                                    int newSalary = Convert.ToInt32(Console.ReadLine());
+                                    employeeArray[index] = new SalaryEmployee(newEmployeeLastName, newEmployeeFirstName, newEmplpoyeeType, newSalary);
+                                    Console.WriteLine();
+                                    Console.WriteLine(employeeArray[index]);
+                                    Console.WriteLine();
+                                }
+                                else if (newEmplpoyeeType == 'H')
+                                {
+                                    Console.WriteLine("Enter the new employee's hourly rate.");
+                                    double newHourlyRate = Convert.ToDouble(Console.ReadLine());
+                                    employeeArray[index] = new HourlyEmployee(newEmployeeLastName, newEmployeeFirstName, newEmplpoyeeType, newHourlyRate);
+                                    Console.WriteLine();
+                                    Console.WriteLine(employeeArray[index]);
+                                    Console.WriteLine();
+                                }
+                                //employeeArray[index]=newName;
+                                //Console.WriteLine(employeeArray[index] + "Has been added at position " + index + ".");
                                 spaceBool=true;
+                                break;
                             };
                         }  
                         if (spaceBool==false)
                             {
-                                Console.WriteLine("There is no space in the array. Delete a name first.");
+                                Console.WriteLine("There is no space in the array. Delete an employee first.");
                                 break;           
                             }
-                    }while (!spaceBool); */
+                    }while (!spaceBool); 
                 }
 
                 //if the option is R or r then print the array
@@ -247,7 +276,7 @@ namespace EmployeeBonuses
                 {
                     Console.WriteLine("Goodbye.");
                 }
-                
+
             } while (!(userChoiceString=="Q") && !(userChoiceString=="q"));
 
 
