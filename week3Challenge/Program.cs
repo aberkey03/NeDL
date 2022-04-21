@@ -165,85 +165,90 @@ namespace EmployeeBonuses
                 }
 
                 //if the option is R or r then print the array
-            else if (userChoiceString=="R" || userChoiceString=="r")
-            {
-                Console.WriteLine("In the R/r area.");
-               /*  for (index =0;index<10;index++)
+                else if (userChoiceString=="R" || userChoiceString=="r")
                 {
-                    Console.WriteLine(nameArray[index]);
-                } */
-            }
-        
-        //if the option is U or u then update a name in the array (if it is there)
-            else if (userChoiceString=="U" || userChoiceString=="u")
-            {
-                Console.WriteLine("In the U/u area.");
-                /* string currentName;
-                string newName;
-                int result = -1;
-                int [] arrPosition = new int {0};
-                //determine if name is in array
-                Console.WriteLine("Which name do you want to update?");
-                do
-                {
-                    //prompt for existing name to change
-                    currentName=Console.ReadLine();
-                    result = search(nameArray,currentName);
-                    if (result !=-1)
+                    Console.WriteLine("In the R/r area.");
+                    //loop through array and print only those with data
+                    for (int i = 0; i < employeeArray.Length; i++)
                     {
-                        int [] arrPosition = new int {result};
-                    }
-                    if (result  ==-1)
-                    {
-                        Console.WriteLine($"{currentName} not found. Which name do you want to update?");
-                    }
-                }while(result == -1);
-                Console.WriteLine("Name found. Enter new name.");
-                newName=Console.ReadLine();
-                foreach (int result in arrPosition)
-                {
-                    nameArray[result]=newName;
-                }
-                Console.WriteLine($"{currentName} has been updated to {newName} {arrPosition.Length} times."); */
-            }
-        
-        //else if the option is D or d then delete a name in the array (if it is there)
-            else if (userChoiceString=="D" || userChoiceString=="d")
-            {
-                Console.WriteLine("In the D/d area.");
-                /* string deleteName;
-                bool nameFound=false;
-                //determine if name is in array
-                Console.WriteLine("Which name do you want to delete?");
-                do
-                {
-                    //prompt for existing name to change
-                    deleteName=Console.ReadLine();
-                    for (index =0;index<10;index++)
-                    {
-                        if (nameArray[index]==deleteName)
+                        if(!(employeeArray[i]==null))
                         {
-                            nameFound=true;
-                            Console.WriteLine($"{deleteName} is at postion {index}.");
-                            //update name in array
-                            nameArray[index]="";
-                            Console.WriteLine($"{deleteName} has been deleted from position {index}.");
-                            break;
+                            Console.WriteLine(employeeArray[i]);
                         }
                     }
-                    if (nameFound==false)
-                    {
-                        Console.WriteLine($"{deleteName} not found. Which name do you want to delete?");
-                    };
-                }while(!(nameFound)); */
-            }
+                }
         
-        //else if the option is Q or q then quit the program 
-            else 
-            {
-                Console.WriteLine("Goodbye.");
-            }
-        } while (!(userChoiceString=="Q") && !(userChoiceString=="q"));
+                //if the option is U or u then update a name in the array (if it is there)
+                else if (userChoiceString=="U" || userChoiceString=="u")
+                {
+                    Console.WriteLine("In the U/u area.");
+                    /* string currentName;
+                    string newName;
+                    int result = -1;
+                    int [] arrPosition = new int {0};
+                    //determine if name is in array
+                    Console.WriteLine("Which name do you want to update?");
+                    do
+                    {
+                        //prompt for existing name to change
+                        currentName=Console.ReadLine();
+                        result = search(nameArray,currentName);
+                        if (result !=-1)
+                        {
+                            int [] arrPosition = new int {result};
+                        }
+                        if (result  ==-1)
+                        {
+                            Console.WriteLine($"{currentName} not found. Which name do you want to update?");
+                        }
+                    }while(result == -1);
+                    Console.WriteLine("Name found. Enter new name.");
+                    newName=Console.ReadLine();
+                    foreach (int result in arrPosition)
+                    {
+                        nameArray[result]=newName;
+                    }
+                    Console.WriteLine($"{currentName} has been updated to {newName} {arrPosition.Length} times."); */
+                }
+        
+                //else if the option is D or d then delete a name in the array (if it is there)
+                else if (userChoiceString=="D" || userChoiceString=="d")
+                {
+                    Console.WriteLine("In the D/d area.");
+                    /* string deleteName;
+                    bool nameFound=false;
+                    //determine if name is in array
+                    Console.WriteLine("Which name do you want to delete?");
+                    do
+                    {
+                        //prompt for existing name to change
+                        deleteName=Console.ReadLine();
+                        for (index =0;index<10;index++)
+                        {
+                            if (nameArray[index]==deleteName)
+                            {
+                                nameFound=true;
+                                Console.WriteLine($"{deleteName} is at postion {index}.");
+                                //update name in array
+                                nameArray[index]="";
+                                Console.WriteLine($"{deleteName} has been deleted from position {index}.");
+                                break;
+                            }
+                        }
+                        if (nameFound==false)
+                        {
+                            Console.WriteLine($"{deleteName} not found. Which name do you want to delete?");
+                        };
+                    }while(!(nameFound)); */
+                }
+        
+                //else if the option is Q or q then quit the program 
+                else 
+                {
+                    Console.WriteLine("Goodbye.");
+                }
+                
+            } while (!(userChoiceString=="Q") && !(userChoiceString=="q"));
 
 
         }  //end main
