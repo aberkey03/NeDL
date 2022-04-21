@@ -15,6 +15,11 @@ namespace EmployeeBonuses
         {
             return HourlyRate*80;  //2 weeks compensation 
         }
+        //HourlyEmployee ToString
+        public override string ToString()
+        {
+            return $"Employee Name: {LastName}, {FirstName}; Employee Type: {EmployeeType}; Hourly Rate: {HourlyRate}; Bonus: {BonusCalculation()} ";
+        }
         
         //CONSTRUCTORS
         //empty HourlyEmployee constructor 
@@ -29,11 +34,7 @@ namespace EmployeeBonuses
             HourlyRate = newHourlyRate;
         }
 
-        //HourlyEmployee ToString
-        public override string ToString()
-        {
-            return $"Employee Name: {LastName}, {FirstName}; Employee Type: {EmployeeType}; Bonus: {BonusCalculation()} ";
-        }
+        
 
     }
 }
