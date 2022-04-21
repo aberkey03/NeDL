@@ -224,49 +224,75 @@ namespace EmployeeBonuses
                     bool spaceBool=false;
                     
                     do{
-                        for (int index = 0 ; index < employeeArray.Length;index++)
-                        {
-                            if (employeeArray[index]==null)
+                        Console.WriteLine("Enter 'S' to add a salary employee, or enter 'H' to add a hourly employee.");
+                        char newEmplpoyeeType = Convert.ToChar(Console.ReadLine());
+                        if (newEmplpoyeeType == 'S')
                             {
-                                //confirm there is a blank space in the array
-                                Console.WriteLine("There is a blank space at position " + index + ".");
-                                
-                                //get LastName
-                                Console.WriteLine("Enter the new employee's last name.");
-                                string newEmployeeLastName = Console.ReadLine();
-                                //get FirstName
-                                Console.WriteLine("Enter the new employee's first name.");
-                                string newEmployeeFirstName = Console.ReadLine();
-                                //determine if hourly or salary
-                                Console.WriteLine("Enter the new employee's employee type (H or S).");
-                                char newEmplpoyeeType = Convert.ToChar(Console.ReadLine());
-                                if (newEmplpoyeeType == 'S')
+                                for (int index = 0 ; index < salaryEmployeeArray.Length;index++)
                                 {
-                                    Console.WriteLine("Enter the new employee's salary.");
-                                    int newSalary = Convert.ToInt32(Console.ReadLine());
-                                    employeeArray[index] = new SalaryEmployee(newEmployeeLastName, newEmployeeFirstName, newEmplpoyeeType, newSalary);
-                                    Console.WriteLine();
-                                    Console.WriteLine(employeeArray[index]);
-                                    Console.WriteLine();
-                                }
-                                else if (newEmplpoyeeType == 'H')
+                                    if (salaryEmployeeArray[index]==null)
+                                    {
+                                        //confirm there is a blank space in the array
+                                        Console.WriteLine("There is a blank space at position " + index + ".");
+                                        
+                                        //get LastName
+                                        Console.WriteLine("Enter the new employee's last name.");
+                                        string newEmployeeLastName = Console.ReadLine();
+                                        //get FirstName
+                                        Console.WriteLine("Enter the new employee's first name.");
+                                        string newEmployeeFirstName = Console.ReadLine();
+                                        Console.WriteLine("Enter the new employee's salary.");
+                                        int newSalary = Convert.ToInt32(Console.ReadLine());
+                                        salaryEmployeeArray[index] = new SalaryEmployee(newEmployeeLastName, newEmployeeFirstName, newEmplpoyeeType, newSalary);
+                                        
+                                        Console.WriteLine();
+                                        Console.WriteLine(salaryEmployeeArray[index]);
+                                        Console.WriteLine();
+                                        
+                                        spaceBool=true;
+                                        break;
+                                    } 
+                                };
+                                if (spaceBool==false)
                                 {
-                                    Console.WriteLine("Enter the new employee's hourly rate.");
-                                    double newHourlyRate = Convert.ToDouble(Console.ReadLine());
-                                    employeeArray[index] = new HourlyEmployee(newEmployeeLastName, newEmployeeFirstName, newEmplpoyeeType, newHourlyRate);
-                                    Console.WriteLine();
-                                    Console.WriteLine(employeeArray[index]);
-                                    Console.WriteLine();
+                                    Console.WriteLine("There is no space in the array. Delete an employee first.");
+                                    break;           
                                 }
-                                spaceBool=true;
-                                break;
-                            };
-                        }  
-                        if (spaceBool==false)
+                            }  
+                        if (newEmplpoyeeType == 'H')
                             {
-                                Console.WriteLine("There is no space in the array. Delete an employee first.");
-                                break;           
-                            }
+                                for (int index = 0 ; index < hourlyEmployeeArray.Length;index++)
+                                {
+                                    if (hourlyEmployeeArray[index]==null)
+                                    {
+                                        //confirm there is a blank space in the array
+                                        Console.WriteLine("There is a blank space at position " + index + ".");
+                                        
+                                        //get LastName
+                                        Console.WriteLine("Enter the new employee's last name.");
+                                        string newEmployeeLastName = Console.ReadLine();
+                                        //get FirstName
+                                        Console.WriteLine("Enter the new employee's first name.");
+                                        string newEmployeeFirstName = Console.ReadLine();
+                                        Console.WriteLine("Enter the new employee's hourly rate.");
+                                        double newHourlyRate = Convert.ToDouble(Console.ReadLine());
+                                        hourlyEmployeeArray[index] = new HourlyEmployee(newEmployeeLastName, newEmployeeFirstName, newEmplpoyeeType, newHourlyRate);
+                                        
+                                        Console.WriteLine();
+                                        Console.WriteLine(hourlyEmployeeArray[index]);
+                                        Console.WriteLine();
+                                        
+                                        spaceBool=true;
+                                        break;
+                                    } 
+                                };
+                                if (spaceBool==false)
+                                {
+                                    Console.WriteLine("There is no space in the array. Delete an employee first.");
+                                    break;           
+                                }
+                            }  
+                        
                     }while (!spaceBool); 
                 }
 
