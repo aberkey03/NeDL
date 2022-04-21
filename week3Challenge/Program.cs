@@ -60,6 +60,11 @@ namespace EmployeeBonuses
             string userChoiceString; //main menue entry
             bool userChoice;  //flag for valid main menue entry
             string fileName = "employees.txt";
+            int numHourlyEmployees = 10;
+            int numSalaryEmployees = 10;
+
+            HourlyEmployee [] hourlyEmployeeArray = new HourlyEmployee [numHourlyEmployees];
+            SalaryEmployee [] salaryEmployeeArray = new SalaryEmployee [numSalaryEmployees];
 
 
             do //main loop, continues until Q is entered 
@@ -121,20 +126,20 @@ namespace EmployeeBonuses
                             {
                                 int salary = Convert.ToInt32(sr.ReadLine());  //if salary, sets fourth line of the file to salary
                                 Console.WriteLine(salary);
-                                employeeArray[index] = new SalaryEmployee (lastName, firstName, employeeType, salary);
+                                salaryEmployeeArray[index] = new SalaryEmployee (lastName, firstName, employeeType, salary);
                             }
                             else if (employeeType == 'H')
                             {
                                 double hourlyRate = Convert.ToDouble(sr.ReadLine()); //else if hourly, sets fourth line of the file to hourlyRate
                                 Console.WriteLine(hourlyRate);
-                                employeeArray[index] = new HourlyEmployee (lastName, firstName, employeeType, hourlyRate);
+                                hourlyEmployeeArray[index] = new HourlyEmployee (lastName, firstName, employeeType, hourlyRate);
                             }
-                            
+                            /* //cant use with 2 arrays, shouldnt be an issue as long as data file is correct
                             index++;
                             if (index==employeeArray.Length)
                             {
                                 break;
-                            }
+                            } */
                         }
                     }
                     /* original CRUD
@@ -170,20 +175,25 @@ namespace EmployeeBonuses
                     // Create the file.
                     using (StreamWriter fileStr = File.CreateText(fileName)) 
                     {
-                        for (int index = 0; index < employeeArray.Length; index++)
+                        for (int index = 0; index < hourlyEmployeeArray.Length; index++)
                         {
-                            fileStr.WriteLine(employeeArray[index].LastName);
-                            fileStr.WriteLine(employeeArray[index].FirstName);
-                            fileStr.WriteLine(employeeArray[index].EmployeeType);
-                            if (employeeArray[index].EmployeeType == 'S')
+                            if (hourlyEmployeeArray[index] != null)
                             {
-                                fileStr.WriteLine(employeeArray[index]);
+                                fileStr.WriteLine(hourlyEmployeeArray[index].LastName);
+                                fileStr.WriteLine(hourlyEmployeeArray[index].FirstName);
+                                fileStr.WriteLine(hourlyEmployeeArray[index].EmployeeType);
+                                fileStr.WriteLine(hourlyEmployeeArray[index].HourlyRate); //HourlyRate does not exist for Employee class
                             }
-                            else if (employeeArray[index].EmployeeType == 'H')
+                        }
+                        for (int index = 0; index < salaryEmployeeArray.Length; index++)
+                        {
+                            if (salaryEmployeeArray[index] != null)
                             {
-                                fileStr.WriteLine(employeeArray[index]);
+                                fileStr.WriteLine(salaryEmployeeArray[index].LastName);
+                                fileStr.WriteLine(salaryEmployeeArray[index].FirstName);
+                                fileStr.WriteLine(salaryEmployeeArray[index].EmployeeType);
+                                fileStr.WriteLine(salaryEmployeeArray[index].Salary); //Salary does not exist for Employee class
                             }
-                            
                         }
                     }
                     Console.WriteLine(fileName + " has been saved.");
@@ -265,11 +275,17 @@ namespace EmployeeBonuses
                 {
                     Console.WriteLine("In the R/r area.");
                     //loop through array and print only those with data
-                    for (int i = 0; i < employeeArray.Length; i++)
+                    for (int index = 0; index < hourlyEmployeeArray.Length; index++)
                     {
-                        if(!(employeeArray[i]==null))
+                        if(!(hourlyEmployeeArray[index]==null))
                         {
-                            Console.WriteLine(employeeArray[i]);
+                            Console.WriteLine("Hourly employees:");
+                            Console.WriteLine(hourlyEmployeeArray[index]);
+                        }
+                        if(!(salaryEmployeeArray[index]==null))
+                        {
+                            Console.WriteLine("Hourly employees:");
+                            Console.WriteLine(salaryEmployeeArray[index]);
                         }
                     }
                 }
