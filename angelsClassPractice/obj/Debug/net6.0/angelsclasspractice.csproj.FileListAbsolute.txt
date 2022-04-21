@@ -1,0 +1,15 @@
+C:\Users\ABerkey\Desktop\NeDL\angelsClassPractice\obj\Debug\net6.0\angelsclasspractice.csproj.AssemblyReference.cache
+C:\Users\ABerkey\Desktop\NeDL\angelsClassPractice\obj\Debug\net6.0\angelsclasspractice.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ABerkey\Desktop\NeDL\angelsClassPractice\obj\Debug\net6.0\angelsclasspractice.AssemblyInfoInputs.cache
+C:\Users\ABerkey\Desktop\NeDL\angelsClassPractice\obj\Debug\net6.0\angelsclasspractice.AssemblyInfo.cs
+C:\Users\ABerkey\Desktop\NeDL\angelsClassPractice\obj\Debug\net6.0\angelsclasspractice.csproj.CoreCompileInputs.cache
+C:\Users\ABerkey\Desktop\NeDL\angelsClassPractice\bin\Debug\net6.0\angelsclasspractice.exe
+C:\Users\ABerkey\Desktop\NeDL\angelsClassPractice\bin\Debug\net6.0\angelsclasspractice.deps.json
+C:\Users\ABerkey\Desktop\NeDL\angelsClassPractice\bin\Debug\net6.0\angelsclasspractice.runtimeconfig.json
+C:\Users\ABerkey\Desktop\NeDL\angelsClassPractice\bin\Debug\net6.0\angelsclasspractice.dll
+C:\Users\ABerkey\Desktop\NeDL\angelsClassPractice\bin\Debug\net6.0\ref\angelsclasspractice.dll
+C:\Users\ABerkey\Desktop\NeDL\angelsClassPractice\bin\Debug\net6.0\angelsclasspractice.pdb
+C:\Users\ABerkey\Desktop\NeDL\angelsClassPractice\obj\Debug\net6.0\angelsclasspractice.dll
+C:\Users\ABerkey\Desktop\NeDL\angelsClassPractice\obj\Debug\net6.0\ref\angelsclasspractice.dll
+C:\Users\ABerkey\Desktop\NeDL\angelsClassPractice\obj\Debug\net6.0\angelsclasspractice.pdb
+C:\Users\ABerkey\Desktop\NeDL\angelsClassPractice\obj\Debug\net6.0\angelsclasspractice.genruntimeconfig.cache

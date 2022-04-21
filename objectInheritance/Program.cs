@@ -23,7 +23,7 @@ namespace CollectionApp
         Insects cricket = new Insects(true, 6, 1,"cricket", "chrip chirp");
         animalArray[3] = cricket;
 
-        Animal basic = new Animal();
+        Animal basic = new Animal ();
         animalArray[4] = basic;
         
         //write Bird ToString
