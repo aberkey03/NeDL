@@ -7,7 +7,9 @@ namespace EmployeeBonuses
     {
         static void Main (string[] args)
         {
-           /* //test individual class constructors and ToStrings
+            
+            /* 
+            //test individual class constructors and ToStrings
 
             //test empty Employee Constructor
             Employee testEmployee1 = new Employee();
@@ -39,7 +41,8 @@ namespace EmployeeBonuses
             // initialize array of Employees
             Employee [] employeeArray = new Employee [20];
             
-            /* employeeArray[0] = testEmployee2;
+            /* initial class testing
+            employeeArray[0] = testEmployee2;
             employeeArray[1] = testHourlyEmployee2;
             employeeArray[3] = testSalaryEmployee2;
 
@@ -97,33 +100,32 @@ namespace EmployeeBonuses
                     Console.WriteLine("In the L/l area.");
                     using (StreamReader sr = File.OpenText(fileName))
                     {
-                        //string s = ""; //control string
                         int index = 0; //array index
                         string lastName;
                         string firstName;
                         char employeeType;
 
                         Console.WriteLine($"Here is the content of the file {fileName}:");
-                        while ((lastName = sr.ReadLine()) != null)
+                        while ((lastName = sr.ReadLine()) != null) //sets first line of the file to lastName
                         {
                             //lastName = sr.ReadLine();
                             Console.WriteLine(lastName);
 
-                            firstName = sr.ReadLine();
+                            firstName = sr.ReadLine(); //sets the second line of the file to firstName
                             Console.WriteLine(firstName);
 
-                            employeeType = Convert.ToChar(sr.ReadLine());
+                            employeeType = Convert.ToChar(sr.ReadLine()); //sets the third line of the file to employeeType
                             Console.WriteLine(employeeType);
 
                             if (employeeType == 'S')
                             {
-                                int salary = Convert.ToInt32(sr.ReadLine());
+                                int salary = Convert.ToInt32(sr.ReadLine());  //if salary, sets fourth line of the file to salary
                                 Console.WriteLine(salary);
                                 employeeArray[index] = new SalaryEmployee (lastName, firstName, employeeType, salary);
                             }
                             else if (employeeType == 'H')
                             {
-                                double hourlyRate = Convert.ToDouble(sr.ReadLine());
+                                double hourlyRate = Convert.ToDouble(sr.ReadLine()); //else if hourly, sets fourth line of the file to hourlyRate
                                 Console.WriteLine(hourlyRate);
                                 employeeArray[index] = new HourlyEmployee (lastName, firstName, employeeType, hourlyRate);
                             }
@@ -135,7 +137,7 @@ namespace EmployeeBonuses
                             }
                         }
                     }
-                    /* 
+                    /* original CRUD
                     using (StreamReader sr = File.OpenText(fileName))
                     {
                         string s = "";
@@ -158,7 +160,36 @@ namespace EmployeeBonuses
                 else if (userChoiceString=="S" || userChoiceString=="s")
                 {
                     Console.WriteLine("In the S/s area.");
-                    /* // Delete the file if it exists.
+
+                    // Delete the file if it exists.
+                    if (File.Exists(fileName))
+                    {
+                        File.Delete(fileName);
+                    }
+                            
+                    // Create the file.
+                    using (StreamWriter fileStr = File.CreateText(fileName)) 
+                    {
+                        for (int index = 0; index < employeeArray.Length; index++)
+                        {
+                            fileStr.WriteLine(employeeArray[index].LastName);
+                            fileStr.WriteLine(employeeArray[index].FirstName);
+                            fileStr.WriteLine(employeeArray[index].EmployeeType);
+                            if (employeeArray[index].EmployeeType == 'S')
+                            {
+                                fileStr.WriteLine(employeeArray[index]);
+                            }
+                            else if (employeeArray[index].EmployeeType == 'H')
+                            {
+                                fileStr.WriteLine(employeeArray[index]);
+                            }
+                            
+                        }
+                    }
+                    Console.WriteLine(fileName + " has been saved.");
+
+                    /* original CRUD
+                    // Delete the file if it exists.
                     if (File.Exists(fileName))
                     {
                         File.Delete(fileName);
