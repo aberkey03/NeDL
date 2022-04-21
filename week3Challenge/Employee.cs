@@ -18,12 +18,19 @@ namespace EmployeeBonuses
         /* //base field (only used by base class) >> ended up not needing this
         private double compensation; */
 
+        //METHODS
+        
         //base Bonus method
             //set to return double so can be polymorphed by subclasses
             //set to virtual so can be overridden by subclasses
         public virtual double BonusCalculation() 
         {
             return 0.0; //for Employee class bonus will always be 0 
+        }
+        //base ToString
+        public override string ToString()
+        {
+            return $"Employee Name: {LastName}, {FirstName}; Employee Type: {EmployeeType}; Bonus: {BonusCalculation()} ";
         }
         
         //CONSTRUCTORS
@@ -44,11 +51,7 @@ namespace EmployeeBonuses
             EmployeeType = newEmployeeType;
         }
 
-        //base ToString
-        public override string ToString()
-        {
-            return $"Employee Name: {LastName}, {FirstName}; Employee Type: {EmployeeType}; Bonus: {BonusCalculation()} ";
-        }
+        
 
     }
 }
