@@ -58,7 +58,6 @@ namespace EmployeeBonuses
                 
             do //main loop, continues until Q is entered 
             {
-                
                 do //get a valid option, continues until userChoice == true
                 {
                     //display menu of options
@@ -123,7 +122,6 @@ namespace EmployeeBonuses
                                 Console.WriteLine(hourlyRate);
                                 employeeArray[index] = new HourlyEmployee (lastName, firstName, employeeType, hourlyRate);
                             }
-                            
                             index++;
                             if (index==employeeArray.Length)
                             {
@@ -131,23 +129,6 @@ namespace EmployeeBonuses
                             }
                         }
                     }
-                    /* original CRUD
-                    using (StreamReader sr = File.OpenText(fileName))
-                    {
-                        string s = "";
-                        Console.WriteLine($"Here is the content of the file {fileName}:");
-                        while ((s = sr.ReadLine()) != null)
-                        {
-                            Console.WriteLine(s);
-                            nameArray[index]=s;
-                            index=index+1;
-                            if (index==10)
-                            {
-                                break;
-                            }
-                        }
-                        Console.WriteLine("");
-                    } */
                 }
 
                 //else if the option is S or s then store the array of strings into the text file
@@ -183,23 +164,6 @@ namespace EmployeeBonuses
                         }
                     }
                     Console.WriteLine(fileName + " has been saved.");
-
-                    /* original CRUD
-                    // Delete the file if it exists.
-                    if (File.Exists(fileName))
-                    {
-                        File.Delete(fileName);
-                    }
-                            
-                    // Create the file.
-                    using (StreamWriter fileStr = File.CreateText(fileName)) 
-                    {
-                        for (index=0;index<nameArray.Length;index++)
-                        {
-                            fileStr.WriteLine(nameArray[index]);
-                        }
-                    }
-                    Console.WriteLine(fileName + " has been saved."); */
                 }
 
                 //if the option is C or c then add a name to the array of strings (if there is room)
