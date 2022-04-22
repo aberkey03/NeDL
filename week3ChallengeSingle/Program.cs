@@ -1,10 +1,23 @@
 ﻿ 
 using System;
 
+
 namespace EmployeeBonuses
 {
     class Program
     {
+        static int Search(string[] arr, string searchCriteria)
+    {
+        for (int index = 0; index < arr.Length; index++)
+        {
+            if (arr[index]!=null)
+            {
+                if (arr[index].Contains(searchCriteria))
+                    return index;
+            }
+        }
+        return -1;
+    }
         static void Main (string[] args)
         {
             
@@ -190,7 +203,7 @@ namespace EmployeeBonuses
                                 //determine if hourly or salary
                                 Console.WriteLine("Enter the new employee's employee type (H or S).");
                                 char newEmplpoyeeType = Convert.ToChar(Console.ReadLine());
-                                if (newEmplpoyeeType == 'S')
+                                if (newEmplpoyeeType == 'S' || newEmplpoyeeType =='s')
                                 {
                                     Console.WriteLine("Enter the new employee's salary.");
                                     int newSalary = Convert.ToInt32(Console.ReadLine());
@@ -199,7 +212,7 @@ namespace EmployeeBonuses
                                     Console.WriteLine(employeeArray[index]);
                                     Console.WriteLine();
                                 }
-                                else if (newEmplpoyeeType == 'H')
+                                else if (newEmplpoyeeType == 'H'|| newEmplpoyeeType =='h')
                                 {
                                     Console.WriteLine("Enter the new employee's hourly rate.");
                                     double newHourlyRate = Convert.ToDouble(Console.ReadLine());
@@ -207,6 +220,10 @@ namespace EmployeeBonuses
                                     Console.WriteLine();
                                     Console.WriteLine(employeeArray[index]);
                                     Console.WriteLine();
+                                }
+                                else 
+                                {
+                                    Console.WriteLine("Enter a valid option.");
                                 }
                                 spaceBool=true;
                                 break;
@@ -225,11 +242,11 @@ namespace EmployeeBonuses
                 {
                     Console.WriteLine("In the R/r area.");
                     //loop through array and print only those with data
-                    for (int i = 0; i < employeeArray.Length; i++)
+                    for (int index = 0; index < employeeArray.Length; index++)
                     {
-                        if(!(employeeArray[i]==null))
+                        if(!(employeeArray[index]==null))
                         {
-                            Console.WriteLine(employeeArray[i]);
+                            Console.WriteLine(employeeArray[index]);
                         }
                     }
                 }
@@ -238,6 +255,28 @@ namespace EmployeeBonuses
                 else if (userChoiceString=="U" || userChoiceString=="u")
                 {
                     Console.WriteLine("In the U/u area.");
+                    
+                    string[] stringEmployeeArray = new string [employeeArray.Length];
+                    
+                    for (int index = 0; index < employeeArray.Length; index++)
+                    {
+                        if(employeeArray[index]!=null)
+                        {
+                            stringEmployeeArray[index] = Convert.ToString(employeeArray[index]);
+                            Console.WriteLine(stringEmployeeArray[index]);
+                            index++;
+                        }
+                    }
+                    
+
+                    Console.WriteLine("Enter the the criteria you want to search for.");
+                    string searchCriteria = Console.ReadLine();
+                    Console.WriteLine(Search(stringEmployeeArray, searchCriteria));
+                    
+                    //throws error bc first object in the array is ALWAYS NULL?!?!?!
+                    //Employee[] value = Array.FindAll(employeeArray, Employee => Employee.FirstName.Equals(employeeFirstName));
+                    
+                    
                     /* string currentName;
                     string newName;
                     int result = -1;
