@@ -1,0 +1,15 @@
+C:\Users\ABerkey\Desktop\NeDL\abstractClassList(employees)\bin\Debug\net6.0\abstractClassList(employees).exe
+C:\Users\ABerkey\Desktop\NeDL\abstractClassList(employees)\bin\Debug\net6.0\abstractClassList(employees).deps.json
+C:\Users\ABerkey\Desktop\NeDL\abstractClassList(employees)\bin\Debug\net6.0\abstractClassList(employees).runtimeconfig.json
+C:\Users\ABerkey\Desktop\NeDL\abstractClassList(employees)\bin\Debug\net6.0\abstractClassList(employees).dll
+C:\Users\ABerkey\Desktop\NeDL\abstractClassList(employees)\bin\Debug\net6.0\ref\abstractClassList(employees).dll
+C:\Users\ABerkey\Desktop\NeDL\abstractClassList(employees)\bin\Debug\net6.0\abstractClassList(employees).pdb
+C:\Users\ABerkey\Desktop\NeDL\abstractClassList(employees)\obj\Debug\net6.0\abstractClassList(employees).csproj.AssemblyReference.cache
+C:\Users\ABerkey\Desktop\NeDL\abstractClassList(employees)\obj\Debug\net6.0\abstractClassList(employees).GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ABerkey\Desktop\NeDL\abstractClassList(employees)\obj\Debug\net6.0\abstractClassList(employees).AssemblyInfoInputs.cache
+C:\Users\ABerkey\Desktop\NeDL\abstractClassList(employees)\obj\Debug\net6.0\abstractClassList(employees).AssemblyInfo.cs
+C:\Users\ABerkey\Desktop\NeDL\abstractClassList(employees)\obj\Debug\net6.0\abstractClassList(employees).csproj.CoreCompileInputs.cache
+C:\Users\ABerkey\Desktop\NeDL\abstractClassList(employees)\obj\Debug\net6.0\abstractClassList(employees).dll
+C:\Users\ABerkey\Desktop\NeDL\abstractClassList(employees)\obj\Debug\net6.0\ref\abstractClassList(employees).dll
+C:\Users\ABerkey\Desktop\NeDL\abstractClassList(employees)\obj\Debug\net6.0\abstractClassList(employees).pdb
+C:\Users\ABerkey\Desktop\NeDL\abstractClassList(employees)\obj\Debug\net6.0\abstractClassList(employees).genruntimeconfig.cache
