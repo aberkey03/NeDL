@@ -20,6 +20,11 @@ namespace EmployeeBonuses
         {
             return HourlyRate;
         }
+        //HourlyEmployee StorageString polymorphed from Base
+        public override string StorageString() 
+        {
+            return $"{LastName} | {FirstName} | {EmployeeType} | {HourlyRate}";
+        }
         //HourlyEmployee ToString polymorphed from Base
         public override string ToString()
         {

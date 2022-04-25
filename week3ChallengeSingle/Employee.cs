@@ -42,6 +42,11 @@ namespace EmployeeBonuses
             return -1.00;
         }
 
+        //base StorageString
+        public virtual string StorageString()
+        {
+            return $"{LastName} | {FirstName} | {EmployeeType}";
+        }
 
         //base ToString
         public override string ToString()

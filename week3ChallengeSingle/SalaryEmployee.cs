@@ -20,6 +20,11 @@ namespace EmployeeBonuses
         {
             return $"Employee Name: {LastName}, {FirstName}; Employee Type: {EmployeeType}; Salary: {Salary}; Bonus: {BonusCalculation()} ";
         }
+        //Salary StorageString polymorphed from Base
+        public override string StorageString()
+        {
+            return $"{LastName} | {FirstName} | {EmployeeType} | {Salary}";
+        }
         //Get Salary for SalaryEmployee object, polymorphed from base
         public override double GetSalary()
         {
