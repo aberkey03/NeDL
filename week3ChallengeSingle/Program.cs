@@ -104,37 +104,46 @@ namespace EmployeeBonuses
                 if (userChoiceString=="L" || userChoiceString=="l")
                 {
                     Console.WriteLine("In the L/l area.");
-                    using (StreamReader sr = File.OpenText(fileName))
+                    using (StreamReader sr = File.OpenText("singleLineSource.txt"))
                     {
-                        int index = 0; //array index
-                        string lastName;
-                        string firstName;
-                        char employeeType;
-
-                        Console.WriteLine($"Here is the content of the file {fileName}:");
-                        while ((lastName = sr.ReadLine()) != null) //sets first line of the file to lastName
+                        int index = 0; //employee array index
+                        string fullLine; //full line of text from the source file, values are seperated by '|'
+                        
+                        Console.WriteLine($"Here is the content of the file singleLineSource.txt:");
+                        while ((fullLine = sr.ReadLine()) != null) 
                         {
-                            //lastName = sr.ReadLine();
-                            Console.WriteLine(lastName);
+                            Console.WriteLine(fullLine);
+                            string [] fullLineArray = {fullLine};
 
-                            firstName = sr.ReadLine(); //sets the second line of the file to firstName
-                            Console.WriteLine(firstName);
-
-                            employeeType = Convert.ToChar(sr.ReadLine()); //sets the third line of the file to employeeType
-                            Console.WriteLine(employeeType);
-
-                            if (employeeType == 'S')
+                            string [] employeeDetails = fullLine.Split(" | ");
+                            for (int i = 0; i < fullLineArray.Length; i++)
                             {
-                                int salary = Convert.ToInt32(sr.ReadLine());  //if salary, sets fourth line of the file to salary
-                                Console.WriteLine(salary);
-                                employeeArray[index] = new SalaryEmployee (lastName, firstName, employeeType, salary);
+                                string lastName;
+                                string firstName;
+                                char employeeType;
+                                double hourlyRate;
+                                int salary;
+
+                                lastName = employeeDetails[0];
+                                Console.WriteLine(lastName);
+                                firstName = employeeDetails[1];
+                                Console.WriteLine(firstName);
+                                employeeType = Convert.ToChar(employeeDetails[2]);
+                                Console.WriteLine(employeeType);
+                                    if (employeeType == 'H')
+                                    {
+                                        hourlyRate = Convert.ToDouble(employeeDetails[3]);
+                                        Console.WriteLine(hourlyRate);
+                                        employeeArray[index] = new HourlyEmployee (lastName, firstName, employeeType, hourlyRate);
+                                    }
+                                    else if (employeeType == 'S')
+                                    {
+                                        salary = Convert.ToInt32(employeeDetails[3]);
+                                        Console.WriteLine(salary);
+                                        employeeArray[index] = new SalaryEmployee (lastName, firstName, employeeType, salary);
+                                    }
                             }
-                            else if (employeeType == 'H')
-                            {
-                                double hourlyRate = Convert.ToDouble(sr.ReadLine()); //else if hourly, sets fourth line of the file to hourlyRate
-                                Console.WriteLine(hourlyRate);
-                                employeeArray[index] = new HourlyEmployee (lastName, firstName, employeeType, hourlyRate);
-                            }
+                            Console.WriteLine($"Index = {index}: {employeeArray[index]}");
                             index++;
                             if (index==employeeArray.Length)
                             {
@@ -162,17 +171,7 @@ namespace EmployeeBonuses
                         {
                             if (employeeArray[index] != null)
                             {
-                                fileStr.WriteLine(employeeArray[index].LastName);
-                                fileStr.WriteLine(employeeArray[index].FirstName);
-                                fileStr.WriteLine(employeeArray[index].EmployeeType);
-                                if (employeeArray[index].EmployeeType == 'S')
-                                {
-                                    fileStr.WriteLine(employeeArray[index].GetSalary());
-                                }
-                                else if (employeeArray[index].EmployeeType == 'H')
-                                {
-                                    fileStr.WriteLine(employeeArray[index].GetHourlyRate());
-                                } 
+                                fileStr.WriteLine(employeeArray[index].StorageString());
                             }
                         }
                     }
@@ -256,15 +255,15 @@ namespace EmployeeBonuses
                 {
                     Console.WriteLine("In the U/u area.");
                     
-                    string[] stringEmployeeArray = new string [employeeArray.Length];
+                    string[] stringEmployeeArray = new string [employeeArray.Length]; //initalize array of strings to hold the employee info as 1 string
                     
-                    for (int index = 0; index < employeeArray.Length; index++)
+                    for (int index = 0; index < employeeArray.Length; index++)  //loop through employeeArray, and add each to string array
                     {
-                        if(employeeArray[index]!=null)
+                        if(!(employeeArray[index]==null))
                         {
-                            stringEmployeeArray[index] = Convert.ToString(employeeArray[index]);
+                            //Console.WriteLine(index);
+                            stringEmployeeArray[index] = employeeArray[index].StorageString();
                             Console.WriteLine(stringEmployeeArray[index]);
-                            index++;
                         }
                     }
                     
@@ -272,10 +271,10 @@ namespace EmployeeBonuses
                     Console.WriteLine("Enter the the criteria you want to search for.");
                     string searchCriteria = Console.ReadLine();
                     Console.WriteLine(Search(stringEmployeeArray, searchCriteria));
+
+                    //  TODO finish update
                     
-                    //throws error bc first object in the array is ALWAYS NULL?!?!?!
-                    //Employee[] value = Array.FindAll(employeeArray, Employee => Employee.FirstName.Equals(employeeFirstName));
-                    
+                                     
                     
                     /* string currentName;
                     string newName;
