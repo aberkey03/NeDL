@@ -1,0 +1,15 @@
+C:\Users\ABerkey\Desktop\NeDL\interfaceList\bin\Debug\net6.0\interfaceList.exe
+C:\Users\ABerkey\Desktop\NeDL\interfaceList\bin\Debug\net6.0\interfaceList.deps.json
+C:\Users\ABerkey\Desktop\NeDL\interfaceList\bin\Debug\net6.0\interfaceList.runtimeconfig.json
+C:\Users\ABerkey\Desktop\NeDL\interfaceList\bin\Debug\net6.0\interfaceList.dll
+C:\Users\ABerkey\Desktop\NeDL\interfaceList\bin\Debug\net6.0\ref\interfaceList.dll
+C:\Users\ABerkey\Desktop\NeDL\interfaceList\bin\Debug\net6.0\interfaceList.pdb
+C:\Users\ABerkey\Desktop\NeDL\interfaceList\obj\Debug\net6.0\interfaceList.csproj.AssemblyReference.cache
+C:\Users\ABerkey\Desktop\NeDL\interfaceList\obj\Debug\net6.0\interfaceList.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ABerkey\Desktop\NeDL\interfaceList\obj\Debug\net6.0\interfaceList.AssemblyInfoInputs.cache
+C:\Users\ABerkey\Desktop\NeDL\interfaceList\obj\Debug\net6.0\interfaceList.AssemblyInfo.cs
+C:\Users\ABerkey\Desktop\NeDL\interfaceList\obj\Debug\net6.0\interfaceList.csproj.CoreCompileInputs.cache
+C:\Users\ABerkey\Desktop\NeDL\interfaceList\obj\Debug\net6.0\interfaceList.dll
+C:\Users\ABerkey\Desktop\NeDL\interfaceList\obj\Debug\net6.0\ref\interfaceList.dll
+C:\Users\ABerkey\Desktop\NeDL\interfaceList\obj\Debug\net6.0\interfaceList.pdb
+C:\Users\ABerkey\Desktop\NeDL\interfaceList\obj\Debug\net6.0\interfaceList.genruntimeconfig.cache
