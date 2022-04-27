@@ -2,7 +2,7 @@ using System;
 
 namespace InterfaceList
 {
-  class Employee
+  class Employee : IEmployeeType
   {
     public int EmployeeId
         {get;set;}
@@ -12,7 +12,10 @@ namespace InterfaceList
         {get;set;}
     public char EmployeeType
         {get;set;}
-    
+    public void SetEmployeeType(char newEmployeeType)
+    {
+        
+    }
     public Employee()
         {
             EmployeeId = -1;
