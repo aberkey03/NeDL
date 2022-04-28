@@ -7,12 +7,13 @@ namespace Week4Challenge
         //properties
         public double AnnualFee
             {get;set;}
+            =50;
         
         //constructors
-        public CheckingAccount(int newAccountId, string newAccountType, double newAccountBalance, double newAnnualfee) 
+        public CheckingAccount(int newAccountId, string newAccountType, double newAccountBalance) 
             : base(newAccountId, newAccountType, newAccountBalance)
         {
-            AnnualFee = newAnnualfee;
+            ;
         }
         
         //methods

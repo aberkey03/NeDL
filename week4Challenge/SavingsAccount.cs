@@ -23,7 +23,7 @@ namespace Week4Challenge
         }
         public override string ToString() //Account.ToString + SavingsAccount.InterestRate + SavingsAccount.CalculateInterest() 
         {
-            return base.ToString() + $" || Annual Interest Rate: {InterestRate}" + $" || Interest Accural: {CalculateInterest()}";
+            return base.ToString() + $" || Annual Interest Rate: {InterestRate}" + $" || Interest Accural: ${CalculateInterest()}";
         }
     }
 }
