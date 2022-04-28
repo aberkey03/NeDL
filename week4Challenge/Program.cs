@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 using System.Collections.Generic;
 
 namespace Week4Challenge
@@ -33,17 +34,17 @@ namespace Week4Challenge
       //test Cd withdrawl
       //testCdAccount1.Withdrawl(99);
 
-            /* //create dictionary to hold account info
-            Dictionary<int, Account> accountsDictionary = new Dictionary<int, Account>();
+            //create dictionary to hold account info
+            /* Dictionary<int, Account> accountsDictionary = new Dictionary<int, Account>();
 
             accountsDictionary.Add(100, testCdAccount1);
             accountsDictionary.Add(200, testCheckingAccount1);
-            accountsDictionary.Add(300, testSavingsAccount1);
+            accountsDictionary.Add(300, testSavingsAccount1); */
 
-            foreach(KeyValuePair<int, Account> accountDetails in accountsDictionary)
+            /* foreach(KeyValuePair<int, Account> accountDetails in accountsDictionary)
             {
-              Console.WriteLine("{0} and {1}", accountsDictionary.Key, accountsDictionary);
-              Console.WriteLine(accountsDictionary.Values);
+              Console.WriteLine("{0} and {1}", accountDetails.Key, accountDetails.Value);
+              Console.WriteLine(accountDetails.Value);
             } */
 
       List<Account> accountList = new List<Account>();
@@ -61,7 +62,9 @@ namespace Week4Challenge
       } */
 
       bool validUserChoice;
-      char userChoice;
+      string userChoice;
+
+      /* //dictionary
       
       do //repeat main loop until Q is entered
       {
@@ -75,9 +78,9 @@ namespace Week4Challenge
           Console.WriteLine("W: Perform a withdrawal transaction.");
           Console.WriteLine("Q: Quit the program.");
           //read user entry
-          userChoice = Convert.ToChar(Console.ReadLine());
+          userChoice = Console.ReadLine();
           //verify user entry is valid
-          validUserChoice = (userChoice == 'L' || userChoice == 'l' || userChoice == 'D' || userChoice == 'd' || userChoice == 'W' || userChoice == 'w' || userChoice == 'Q' || userChoice == 'q');
+          validUserChoice = (userChoice == "L" || userChoice == "l" || userChoice == "D" || userChoice == "d" || userChoice == "W" || userChoice == "w" || userChoice == "Q" || userChoice == "q");
           
           if (!validUserChoice) //if not valid tell to enter valid option
           {
@@ -86,17 +89,17 @@ namespace Week4Challenge
         } while (!validUserChoice); //end valid option loop
       
       //if L >> List area
-      if (userChoice == 'L'|| userChoice == 'l')
+      if (userChoice == "L" || userChoice == "l")
       {
         Console.WriteLine("In the L area.");
-        foreach (Account accountDetails in accountList)
-        {
-          Console.WriteLine(accountDetails);
-        }
+        foreach(KeyValuePair<int, Account> accountDetails in accountsDictionary)
+            {
+              Console.WriteLine(accountDetails.Value);
+            }
       }
 
       //else if D >> Deposit Area
-      if (userChoice == 'D' || userChoice == 'd')
+      if (userChoice == "D" || userChoice == "d")
       {
         Console.WriteLine("In the D area.");
         bool accountFound = false;
@@ -123,7 +126,7 @@ namespace Week4Challenge
       }//end D area
 
       //esle if W
-      if (userChoice == 'W' || userChoice == 'w')
+      if (userChoice == "W" || userChoice ==  "w")
       {
         Console.WriteLine("In the W area.");
         bool accountFound = false;
@@ -137,7 +140,7 @@ namespace Week4Challenge
             {
               Console.WriteLine($"Account found. How much would you like to withdraw?");
               double depositAmount = Convert.ToInt32(Console.ReadLine());
-              accountList[index].Withdraw(depositAmount); //puls default Account method for Savings, and CheckingAccount/CdAccount methods respectively
+              accountList[index].Withdraw(depositAmount); //pulls default Account method for Savings, and CheckingAccount/CdAccount methods respectively
               accountFound = true;
             }
           }
@@ -150,12 +153,109 @@ namespace Week4Challenge
       
 
       //else if Q
-      if (userChoice == 'Q' || userChoice == 'q')
+      if (userChoice == "Q" || userChoice == "q")
       {
         Console.WriteLine("Goodbye.");
       }
 
-      } while (!(userChoice == 'Q' || userChoice == 'q')); //end main loop
+      } while (!(userChoice == "Q" || userChoice == "q")); //end main loop */
+
+
+      //LIST
+
+      do //repeat main loop until Q is entered
+      {
+        do //repeat loop until a valid option is entered
+        {
+          validUserChoice = false; //set to false until a valid option is selected
+          //display options
+          Console.WriteLine("What do you want to do?");
+          Console.WriteLine("L: List all of the accounts in the list.");
+          Console.WriteLine("D: Perform a deposit transaction.");
+          Console.WriteLine("W: Perform a withdrawal transaction.");
+          Console.WriteLine("Q: Quit the program.");
+          //read user entry
+          userChoice = Console.ReadLine();
+          //verify user entry is valid
+          validUserChoice = (userChoice == "L" || userChoice == "l" || userChoice == "D" || userChoice == "d" || userChoice == "W" || userChoice == "w" || userChoice == "Q" || userChoice == "q");
+          
+          if (!validUserChoice) //if not valid tell to enter valid option
+          {
+            Console.WriteLine("Please enter a valid option.");
+          }
+        } while (!validUserChoice); //end valid option loop
+      
+      //if L >> List area
+      if (userChoice == "L" || userChoice == "l")
+      {
+        Console.WriteLine("In the L area.");
+        foreach (Account accountDetails in accountList)
+        {
+          Console.WriteLine(accountDetails);
+        }
+      }
+
+      //else if D >> Deposit Area
+      if (userChoice == "D" || userChoice == "d")
+      {
+        Console.WriteLine("In the D area.");
+        bool accountFound = false;
+        do //prompt for account until it is found
+        {
+          Console.WriteLine("Enter the account number for which you would like to make a deposit.");
+          int userAccountSearch = Convert.ToInt16(Console.ReadLine());
+          for (int index = 0; index < accountList.Count; index++)
+          {
+            if (accountList[index].AccountId == userAccountSearch) 
+            {
+              Console.WriteLine($"Account found. How much would you like to deposit?");
+              double depositAmount = Convert.ToInt32(Console.ReadLine());
+              accountList[index].Deposit(depositAmount); //deposit method inherited from Account class
+              Console.WriteLine(accountList[index]);
+              accountFound = true;
+            }
+          }
+          if (accountFound != true)
+          {
+            Console.WriteLine("Account not found");
+          }
+        } while (accountFound != true);
+      }//end D area
+
+      //esle if W
+      if (userChoice == "W" || userChoice ==  "w")
+      {
+        Console.WriteLine("In the W area.");
+        bool accountFound = false;
+        do //prompt for account until it is found
+        {
+          Console.WriteLine("Enter the account number from which you would like to withdraw.");
+          int userAccountSearch = Convert.ToInt16(Console.ReadLine());
+          for (int index = 0; index < accountList.Count; index++)
+          {
+            if (accountList[index].AccountId == userAccountSearch) 
+            {
+              Console.WriteLine($"Account found. How much would you like to withdraw?");
+              double depositAmount = Convert.ToInt32(Console.ReadLine());
+              accountList[index].Withdraw(depositAmount); //pulls default Account method for Savings, and CheckingAccount/CdAccount methods respectively
+              accountFound = true;
+            }
+          }
+          if (accountFound != true)
+          {
+            Console.WriteLine("Account not found");
+          }
+        } while (accountFound != true);
+      }//end W area
+      
+
+      //else if Q
+      if (userChoice == "Q" || userChoice == "q")
+      {
+        Console.WriteLine("Goodbye.");
+      }
+
+      } while (!(userChoice == "Q" || userChoice == "q")); //end main loop
     } //end main
   } //end Program class
 } // end namespace
