@@ -22,16 +22,26 @@ namespace Week4Challenge
         }
 
         //methods
+
+        //default Deposit behavior
         public void Deposit(double depositAmount)
         {
             double newAccountBalance = AccountBalance + depositAmount;
             AccountBalance = newAccountBalance;
         }
-        public override string ToString()
-        {    
-            return $"Account ID: {AccountId}, Account Type: {AccountType} || Current Balance: {AccountBalance}";
+        //defualy Withdrawl behavior
+        public virtual void Withdrawl(double withdrwalAmount)
+        {
+            double newAccountBalance = AccountBalance - withdrwalAmount;
+            AccountBalance = newAccountBalance;
+            Console.WriteLine(ToString());
         }
 
+        public override string ToString()
+        {    
+            return $"Account ID: {AccountId}, Account Type: {AccountType} || Current Balance: ${AccountBalance}";
+        }
+        
 
     }
 }
