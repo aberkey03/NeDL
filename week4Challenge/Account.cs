@@ -30,7 +30,7 @@ namespace Week4Challenge
             AccountBalance = newAccountBalance;
         }
         //defualy Withdrawl behavior
-        public virtual void Withdrawl(double withdrwalAmount)
+        public virtual void Withdraw(double withdrwalAmount)
         {
             double newAccountBalance = AccountBalance - withdrwalAmount;
             AccountBalance = newAccountBalance;

@@ -19,14 +19,16 @@ namespace Week4Challenge
         }
         
         //methods
-        public override void Withdrawl(double withdrwalAmount) //overriden from Account class
+        public override void Withdraw(double withdrwalAmount) //overriden from Account class
         {
             double totalWithdrwal = withdrwalAmount + (withdrwalAmount * WithdrawlPenalty);
-            Console.WriteLine(totalWithdrwal);
+            //Console.WriteLine(totalWithdrwal);
             if (totalWithdrwal < AccountBalance)
             {
                 double newAccountBalance = AccountBalance - totalWithdrwal;
                 AccountBalance = newAccountBalance;
+                Console.WriteLine($"Early Withdrawl Penalty: {withdrwalAmount * WithdrawlPenalty}");
+                Console.WriteLine($"Total transaction: {totalWithdrwal}");
                 Console.WriteLine(ToString());
             }
             else 

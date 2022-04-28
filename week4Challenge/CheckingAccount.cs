@@ -17,7 +17,7 @@ namespace Week4Challenge
         }
         
         //methods
-        public override void Withdrawl(double withdrwalAmount) //overriden from Account class
+        public override void Withdraw(double withdrwalAmount) //overriden from Account class
         {
             if (withdrwalAmount < AccountBalance * .5)
             {

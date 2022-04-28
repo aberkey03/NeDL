@@ -48,8 +48,11 @@ namespace Week4Challenge
 
       List<Account> accountList = new List<Account>();
       accountList.Add(testCdAccount1);
+      accountList.Add(new CdAccount(112, "Cd", 11111.23, .05));
       accountList.Add(testCheckingAccount1);
+      accountList.Add(new CheckingAccount(223, "Checking", 55.22));
       accountList.Add(testSavingsAccount1);
+      accountList.Add(new SavingsAccount(334, "Savings", 2315.83));
 
       // test looping through list to display options
       /* foreach (Account accountDetails in accountList)
@@ -82,23 +85,69 @@ namespace Week4Challenge
           }
         } while (!validUserChoice); //end valid option loop
       
-      //if L
+      //if L >> List area
       if (userChoice == 'L'|| userChoice == 'l')
       {
         Console.WriteLine("In the L area.");
+        foreach (Account accountDetails in accountList)
+        {
+          Console.WriteLine(accountDetails);
+        }
       }
 
-      //else if D
+      //else if D >> Deposit Area
       if (userChoice == 'D' || userChoice == 'd')
       {
         Console.WriteLine("In the D area.");
-      }
+        bool accountFound = false;
+        do //prompt for account until it is found
+        {
+          Console.WriteLine("Enter the account number for which you would like to make a deposit.");
+          int userAccountSearch = Convert.ToInt16(Console.ReadLine());
+          for (int index = 0; index < accountList.Count; index++)
+          {
+            if (accountList[index].AccountId == userAccountSearch) 
+            {
+              Console.WriteLine($"Account found. How much would you like to deposit?");
+              double depositAmount = Convert.ToInt32(Console.ReadLine());
+              accountList[index].Deposit(depositAmount);
+              Console.WriteLine(accountList[index]);
+              accountFound = true;
+            }
+          }
+          if (accountFound != true)
+          {
+            Console.WriteLine("Account not found");
+          }
+        } while (accountFound != true);
+      }//end D area
 
       //esle if W
       if (userChoice == 'W' || userChoice == 'w')
       {
         Console.WriteLine("In the W area.");
-      }
+        bool accountFound = false;
+        do //prompt for account until it is found
+        {
+          Console.WriteLine("Enter the account number from which you would like to withdraw.");
+          int userAccountSearch = Convert.ToInt16(Console.ReadLine());
+          for (int index = 0; index < accountList.Count; index++)
+          {
+            if (accountList[index].AccountId == userAccountSearch) 
+            {
+              Console.WriteLine($"Account found. How much would you like to withdraw?");
+              double depositAmount = Convert.ToInt32(Console.ReadLine());
+              accountList[index].Withdraw(depositAmount); //puls default Account method for Savings, and CheckingAccount/CdAccount methods respectively
+              accountFound = true;
+            }
+          }
+          if (accountFound != true)
+          {
+            Console.WriteLine("Account not found");
+          }
+        } while (accountFound != true);
+      }//end W area
+      
 
       //else if Q
       if (userChoice == 'Q' || userChoice == 'q')
