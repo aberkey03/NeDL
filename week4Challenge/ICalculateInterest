@@ -1,9 +1,0 @@
-using System;
-
-namespace Week4Challenge
-{
-  interface ICaclualteInterest
-  {
-    
-  }
-}
