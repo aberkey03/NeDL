@@ -19,6 +19,22 @@ namespace Week4Challenge
         }
         
         //methods
+        public override void Withdrawl(double withdrwalAmount) //overriden from Account class
+        {
+            double totalWithdrwal = withdrwalAmount + (withdrwalAmount * WithdrawlPenalty);
+            Console.WriteLine(totalWithdrwal);
+            if (totalWithdrwal < AccountBalance)
+            {
+                double newAccountBalance = AccountBalance - totalWithdrwal;
+                AccountBalance = newAccountBalance;
+                Console.WriteLine(ToString());
+            }
+            else 
+            {
+                Console.WriteLine("Nonsuficient funds.");
+                Console.WriteLine(ToString());
+            }
+        }
         public double CalculateInterest() //implemented from ICalculateInterest
         {
             double accruedInterest = AccountBalance*InterestRate;
@@ -26,7 +42,7 @@ namespace Week4Challenge
         }
         public override string ToString() //Account.ToString + CDAccount.WithdrwalPentalty + CDAccount.InterestRate + CDAccount.CalculateInterest()
         {
-            return base.ToString() + $" || Early Withdrawl Penalty: {WithdrawlPenalty} || Interest Rate: {InterestRate} || Annual Interest Accrual: {CalculateInterest()}";
+            return base.ToString() + $" || Early Withdrawl Penalty: {WithdrawlPenalty} || Interest Rate: {InterestRate} || Annual Interest Accrual: ${CalculateInterest()}";
         }
         
     }
