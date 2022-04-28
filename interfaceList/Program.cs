@@ -23,7 +23,7 @@ namespace InterfaceList
   {
     static void Main(string[] args)
     {
-        /* int startingIndex = 1001;
+        int startingIndex = 1001;
         int newIndex;
         Dictionary<int, Employee> employeeDictionatry = new Dictionary<int, Employee>();
 
@@ -34,7 +34,7 @@ namespace InterfaceList
         employeeDictionatry.Add(newIndex = newIndex+1, new HourlyEmployee(1004, "Mason", "Zach", 'H', 16.66));
 
         employeeDictionatry.Add(newIndex = newIndex+1, new SalaryEmployee (1005, "Clayton", "Libby", 'S', 55000));
-        employeeDictionatry.Add(newIndex = newIndex+1, new SalaryEmployee (1006, "Clayton", "Chris", 'S', 33333)); */
+        employeeDictionatry.Add(newIndex = newIndex+1, new SalaryEmployee (1006, "Clayton", "Chris", 'S', 33333));
 
         /* Console.WriteLine(employeeDictionatry[1003]);
 
@@ -51,11 +51,11 @@ namespace InterfaceList
 
         employeeDictionatry.Add(newEmployeeId, new HourlyEmployee(newEmployeeId, newLastName, newFirstName, newEmployeeType, newHourlyRate)); */
 
-        /* foreach (KeyValuePair<int, Employee> employeeInfo in employeeDictionatry)
+        foreach (KeyValuePair<int, Employee> employeeInfo in employeeDictionatry)
         {
             Console.WriteLine("{0} and {1}", employeeInfo.Key, employeeInfo.Value);
             Console.WriteLine(employeeInfo.Value);
-        } */
+        }
 
         /* Console.Write("Enter the new Employee ID:");
         newEmployeeId = Convert.ToInt16(Console.ReadLine());
@@ -75,7 +75,7 @@ namespace InterfaceList
 
         //for (int i = 0; i < )
 
-        LinkedList<Employee> employeeLinkedList = new LinkedList <Employee>();
+        /* LinkedList<Employee> employeeLinkedList = new LinkedList <Employee>();
         //employeeLinkedList.AddFirst(new Employee(1001, "Berkey", "Andrew", 'S'));
         //employeeLinkedList.AddFirst(new HourlyEmployee(1004, "Mason", "Zach", 'H', 16.66));
 
@@ -86,7 +86,7 @@ namespace InterfaceList
 
         //ading a ? after the property checks if the value is null before trying to run the comand
         //if it is null, it gets skipped
-        Console.WriteLine(employeeLinkedList.Last?.Value);
+        Console.WriteLine(employeeLinkedList.Last?.Value); */
     }
   }
 }

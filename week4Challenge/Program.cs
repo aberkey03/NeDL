@@ -110,7 +110,7 @@ namespace Week4Challenge
             {
               Console.WriteLine($"Account found. How much would you like to deposit?");
               double depositAmount = Convert.ToInt32(Console.ReadLine());
-              accountList[index].Deposit(depositAmount);
+              accountList[index].Deposit(depositAmount); //deposit method inherited from Account class
               Console.WriteLine(accountList[index]);
               accountFound = true;
             }
