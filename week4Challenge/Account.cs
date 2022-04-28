@@ -2,7 +2,7 @@ using System;
 
 namespace Week4Challenge
 {
-    abstract class Account
+     class Account
     {
         //properties
         public int AccountId
