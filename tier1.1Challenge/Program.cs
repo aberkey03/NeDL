@@ -4,6 +4,38 @@ namespace CustomerMemberships
 {
     class Program
     {
+        public int Search(List<MembershipGeneric> membershipList)
+        {
+            bool membershipFound = false;
+            int result = -1;
+            do
+            {
+                Console.WriteLine("Enter the membership ID");
+                int searchMembershipID = Convert.ToInt32(Console.ReadLine());
+                for (int index = 0; index < membershipList.Count; index++)
+                {
+                    if (membershipList[index].MembershipID == searchMembershipID)
+                    {
+                        Console.WriteLine("Membership found.");
+                        Console.WriteLine(membershipList[index]);
+                        membershipFound = true;
+                        result = membershipList[index].MembershipID;
+                    }
+                }
+                if (membershipFound != true)
+                {
+                    Console.WriteLine("Account not found");
+                    Console.WriteLine("Would you like to search again? (Y/N)");
+                    char searchAgain = Convert.ToChar(Console.ReadLine());
+                    if (searchAgain == 'N')
+                    {
+                        Console.WriteLine("Search canceled. Returning to main menu.");
+                        membershipFound = true; // should break out of the search loop
+                    } 
+                }
+            } while (!membershipFound);
+            return result;
+        }
         static void Main(string[] args)
         {
             /* Console.WriteLine("Regular");
@@ -117,6 +149,9 @@ namespace CustomerMemberships
                     validMainMenuChoice = false;
                     
                     //display options
+                    Console.WriteLine("---------------------------------------------------------------------------");
+                    Console.WriteLine("MAIN MENU");
+                    Console.WriteLine("---------------------------------------------------------------------------");
                     Console.WriteLine("What do you want to do?");
                     Console.WriteLine("C - Create a new membership and add to the membership list.");
                     Console.WriteLine("R - Read all of the memberships in the membership list.");
@@ -151,7 +186,7 @@ namespace CustomerMemberships
                 Be sure you don't duplicate the membership ID.  It needs to be unique. */
                 if (mainMenuChoice == "C" || mainMenuChoice == "c")
                 {
-                    Console.WriteLine("In the 'C' area.");
+                    Console.WriteLine("You selected C - Create a new membership and add to the membership list.");
                 }
 
                 /* DONE
@@ -159,7 +194,7 @@ namespace CustomerMemberships
                 same as L */
                 if (mainMenuChoice == "R" || mainMenuChoice == "r")
                 {
-                    Console.WriteLine("In the 'R' area.");
+                    Console.WriteLine("You selected R - Read all of the memberships in the membership list.");
                     foreach (MembershipGeneric membershipDetails in membershipList)
                     {
                         Console.WriteLine(membershipDetails);
@@ -169,13 +204,40 @@ namespace CustomerMemberships
                 /* U - Update an existing membership based on membership ID. */
                 if (mainMenuChoice == "U" || mainMenuChoice == "u")
                 {
-                    Console.WriteLine("In the 'U' area.");
+                    Console.WriteLine("You selected U - Update an existing membership based on membership ID.");
                 }
 
                 /* D - Delete an existing membership based on membership ID. */
                 if (mainMenuChoice == "D" || mainMenuChoice == "d")
                 {
-                    Console.WriteLine("In the 'D' area.");
+                    Console.WriteLine("You selected D - Delete an existing membership based on membership ID.");
+
+                    bool membershipFound = false;
+                    do
+                    {
+                        Console.WriteLine("Enter the membership ID");
+                        int searchMembershipID = Convert.ToInt32(Console.ReadLine());
+                        for (int index = 0; index < membershipList.Count; index++)
+                        {
+                            if (membershipList[index].MembershipID == searchMembershipID)
+                            {
+                                Console.WriteLine($"Membership {membershipList[index].MembershipID} has been deleted.");
+                                membershipList[index] = null;
+                                membershipFound = true;
+                            }
+                        }
+                        if (membershipFound != true)
+                        {
+                            Console.WriteLine("Account not found");
+                            Console.WriteLine("Would you like to search again? (Y/N)");
+                            string searchAgain = Console.ReadLine();
+                            if (searchAgain == "N")
+                            {
+                                Console.WriteLine("Search canceled. Returning to main menu.");
+                                membershipFound = true; // should break out of the search loop
+                            }
+                        }
+                    } while (!membershipFound);
                 }
 
                 /* DONE
@@ -183,7 +245,7 @@ namespace CustomerMemberships
                 same as R */
                 if (mainMenuChoice == "L" || mainMenuChoice == "l")
                 {
-                    Console.WriteLine("In the 'L' area.");
+                    Console.WriteLine("You selected L - List all of the memberships in the list including all of the information for each account type.");
                     foreach (MembershipGeneric membershipDetails in membershipList)
                     {
                         Console.WriteLine(membershipDetails);
@@ -194,22 +256,27 @@ namespace CustomerMemberships
                 and if the membership exists add the purchase amount to the monthly purchase total. */
                 if (mainMenuChoice == "P" || mainMenuChoice == "p")
                 {
-                    Console.WriteLine("In the 'P' area.");
+                    Console.WriteLine("You selected P - Perform a purchase transaction by getting a membership number from the user and a purchase amount and if the membership exists add the purchase amount to the monthly purchase total.");
                 }
 
                 /* T - Perform a return transaction by getting an membership number from the user and a return amount 
                 and if the membership exists, perform the return by subtracting the return amount for the monthly purchase total. */
                 if (mainMenuChoice == "T" || mainMenuChoice == "t")
                 {
-                    Console.WriteLine("In the 'T' area.");
+                    Console.WriteLine("You selected T - Perform a return transaction by getting an membership number from the user and a return amount and if the membership exists, perform the return by subtracting the return amount for the monthly purchase total.");
                 }
 
                 /* A - Apply cash-back rewards as described above by getting a membership number from the user. */
                 if (mainMenuChoice == "A" || mainMenuChoice == "a")
                 {
-                    Console.WriteLine("In the 'A' area.");
+                    Console.WriteLine("You selected A - Apply cash-back rewards as described above by getting a membership number from the user.");
                 }
 
+                else if (mainMenuChoice == "Q" || mainMenuChoice == "q")
+                {
+                    Console.WriteLine("You selected Q - Quit the transaction processing.");
+                    Console.WriteLine("Goodbye.");
+                }
             }while (!(mainMenuChoice == "Q" || mainMenuChoice == "q")); //end main loop
         } //end Main emthod
     }  //end Program class
