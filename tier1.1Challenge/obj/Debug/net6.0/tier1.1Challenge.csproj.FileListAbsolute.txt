@@ -1,0 +1,15 @@
+C:\Users\ABerkey\Desktop\NeDL\tier1.1Challenge\bin\Debug\net6.0\tier1.1Challenge.exe
+C:\Users\ABerkey\Desktop\NeDL\tier1.1Challenge\bin\Debug\net6.0\tier1.1Challenge.deps.json
+C:\Users\ABerkey\Desktop\NeDL\tier1.1Challenge\bin\Debug\net6.0\tier1.1Challenge.runtimeconfig.json
+C:\Users\ABerkey\Desktop\NeDL\tier1.1Challenge\bin\Debug\net6.0\tier1.1Challenge.dll
+C:\Users\ABerkey\Desktop\NeDL\tier1.1Challenge\bin\Debug\net6.0\ref\tier1.1Challenge.dll
+C:\Users\ABerkey\Desktop\NeDL\tier1.1Challenge\bin\Debug\net6.0\tier1.1Challenge.pdb
+C:\Users\ABerkey\Desktop\NeDL\tier1.1Challenge\obj\Debug\net6.0\tier1.1Challenge.csproj.AssemblyReference.cache
+C:\Users\ABerkey\Desktop\NeDL\tier1.1Challenge\obj\Debug\net6.0\tier1.1Challenge.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ABerkey\Desktop\NeDL\tier1.1Challenge\obj\Debug\net6.0\tier1.1Challenge.AssemblyInfoInputs.cache
+C:\Users\ABerkey\Desktop\NeDL\tier1.1Challenge\obj\Debug\net6.0\tier1.1Challenge.AssemblyInfo.cs
+C:\Users\ABerkey\Desktop\NeDL\tier1.1Challenge\obj\Debug\net6.0\tier1.1Challenge.csproj.CoreCompileInputs.cache
+C:\Users\ABerkey\Desktop\NeDL\tier1.1Challenge\obj\Debug\net6.0\tier1.1Challenge.dll
+C:\Users\ABerkey\Desktop\NeDL\tier1.1Challenge\obj\Debug\net6.0\ref\tier1.1Challenge.dll
+C:\Users\ABerkey\Desktop\NeDL\tier1.1Challenge\obj\Debug\net6.0\tier1.1Challenge.pdb
+C:\Users\ABerkey\Desktop\NeDL\tier1.1Challenge\obj\Debug\net6.0\tier1.1Challenge.genruntimeconfig.cache
