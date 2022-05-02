@@ -23,12 +23,13 @@ namespace CustomerMemberships
         // returns 25% of the annual membership cost
         public double SpecialOffer()
         {
-            double specialOfferAmt = AnnualCost * .25;
+            double specialOfferDiscount = .25;
+            double specialOfferAmt = AnnualCost * specialOfferDiscount;
             return specialOfferAmt;
         }
         
-        // ApplyCashBack()
-        // flat % cash back
+        // ApplyCashBack() overiridden from MembershipGeneric
+        // flat cashBackPercentage 
         // display cash back, clear monthly purchases, display account overview 
         public override void ApplyCashBack()
         {
