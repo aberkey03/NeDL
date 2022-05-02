@@ -10,10 +10,15 @@ namespace Week4Challenge
             =50;
         
         //constructors
+        public CheckingAccount(int newAccountId, string newAccountType, double newAccountBalance, double newAnnualFee) 
+            : base(newAccountId, newAccountType, newAccountBalance)
+        {
+            AnnualFee = newAnnualFee; //assign non-standard AnnualFee
+        }
         public CheckingAccount(int newAccountId, string newAccountType, double newAccountBalance) 
             : base(newAccountId, newAccountType, newAccountBalance)
         {
-            ;
+            //pull standard assigned value 50
         }
         
         //methods

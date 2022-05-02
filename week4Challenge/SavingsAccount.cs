@@ -12,10 +12,20 @@ namespace Week4Challenge
         //constructors
         public SavingsAccount(int newAccountId, string newAccountType, double newAccountBalance) : base(newAccountId, newAccountType, newAccountBalance)
         {
-            ; //no new properties to add
+            ; //uses default interest rate
+        }
+        public SavingsAccount(int newAccountId, string newAccountType, double newAccountBalance, double newInterestRate) : base(newAccountId, newAccountType, newAccountBalance)
+        {
+            InterestRate = newInterestRate; 
         }
 
         //methods
+        public override void Withdraw(double withdrwalAmount)
+        {
+            double newAccountBalance = AccountBalance - withdrwalAmount;
+            AccountBalance = newAccountBalance;
+            Console.WriteLine(ToString());
+        }
         public double CalculateInterest() //implemented from ICalculateInterest
         {
             double accruedInterest = AccountBalance*InterestRate;

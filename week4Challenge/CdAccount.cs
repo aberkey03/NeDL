@@ -17,6 +17,12 @@ namespace Week4Challenge
         {
             WithdrawlPenalty = newWithdrawlPenalty;
         }
+        public CdAccount(int newAccountId, string newAccountType, double newAccountBalance, double newWithdrawlPenalty, double newInterestRate) 
+            : base(newAccountId, newAccountType, newAccountBalance)
+        {
+            WithdrawlPenalty = newWithdrawlPenalty;
+            InterestRate = newInterestRate;
+        }
         
         //methods
         public override void Withdraw(double withdrwalAmount) //overriden from Account class

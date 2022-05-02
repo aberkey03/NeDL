@@ -2,7 +2,7 @@ using System;
 
 namespace Week4Challenge
 {
-     class Account
+    abstract class Account
     {
         //properties
         public int AccountId
@@ -29,14 +29,9 @@ namespace Week4Challenge
             double newAccountBalance = AccountBalance + depositAmount;
             AccountBalance = newAccountBalance;
         }
-        //defualy Withdrawl behavior
-        public virtual void Withdraw(double withdrwalAmount)
-        {
-            double newAccountBalance = AccountBalance - withdrwalAmount;
-            AccountBalance = newAccountBalance;
-            Console.WriteLine(ToString());
-        }
-
+        //defualt Withdrawl behavior
+        public abstract void Withdraw(double withdrwalAmount);
+        
         public override string ToString()
         {    
             return $"Account ID: {AccountId}, Account Type: {AccountType} || Current Balance: ${AccountBalance}";
