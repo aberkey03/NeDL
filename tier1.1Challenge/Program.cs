@@ -43,7 +43,7 @@ namespace CustomerMemberships
             Console.WriteLine("Cash back");
             executive2.ApplyCashBack(); */
 
-            Console.WriteLine("NonProfit, Military/Education");
+            /* Console.WriteLine("NonProfit, Military/Education");
             NonProfit nonProfit1 = new NonProfit(3000, "nonProfit1@gmail.com", "NonProfit", true, 50.00, 300.00);
             Console.WriteLine(nonProfit1);
 
@@ -59,7 +59,7 @@ namespace CustomerMemberships
             nonProfit1.ApplyCashBack();
 
             Console.WriteLine("NonProfit, Non-Military/Education");
-            NonProfit nonProfit2 = new NonProfit(3000, "nonProfit2@gmail.com", "NonProfit", false, 50.00, 300.00);
+            NonProfit nonProfit2 = new NonProfit(3001, "nonProfit2@gmail.com", "NonProfit", false, 50.00, 300.00);
             Console.WriteLine(nonProfit2);
 
             Console.WriteLine("After purchase");
@@ -71,7 +71,22 @@ namespace CustomerMemberships
             Console.WriteLine(nonProfit2);
 
             Console.WriteLine("Cash back");
-            nonProfit2.ApplyCashBack();
+            nonProfit2.ApplyCashBack(); */
+
+            /* Console.WriteLine("Corporate");
+            Corporate corporate1 = new Corporate(4000, "corporate1@gmail.com", "Corporate", 200, 6537.37);
+            Console.WriteLine(corporate1);
+
+            Console.WriteLine("After purchase");
+            corporate1.Purchase(1000);
+            Console.WriteLine(corporate1);
+
+            Console.WriteLine("After return");
+            corporate1.Return(2000);
+            Console.WriteLine(corporate1);
+
+            Console.WriteLine("Cash back");
+            corporate1.ApplyCashBack(); */
         }
     }
 }
