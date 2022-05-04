@@ -154,6 +154,8 @@ namespace CustomerMemberships
             membershipList.Add(nonProfit2);
             membershipList.Add(corporate1);
 
+            Search(membershipList);
+            
             // INTERFACE 
 
             // INITIAL VARIABLES

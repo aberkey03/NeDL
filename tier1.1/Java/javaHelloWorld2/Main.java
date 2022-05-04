@@ -157,6 +157,8 @@ public class Main
       System.out.println(studentName + "'s total weighted:" + totalWeightedScore);
 
       char letterGrade = 'Z';
+      
+      //char ltterGrade; //this threw an error even though I had assigned its value below
       if (totalWeightedScore >= 90.0)
       {
         letterGrade = 'A';
