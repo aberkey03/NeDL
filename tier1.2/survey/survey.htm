@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSF Survey</title>
+    <link rel="stylesheet" href="survey.css">
+    <script>
+        function myFirstFunction() {
+            var submitterName = document.getElementById("name").value;
+            alert ("Thank you " + submitterName);
+        }
+    </script>
+</head>
+<body>
+        <h1 id="title" class="title_header">MSF Survey</h1>
+        <form onsubmit="myFirstFunction()">
+            <p id="p1">This is a paragraph inside the form?</p>
+
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" 
+                    id="name" 
+                    name="name" 
+                    required>
+            </div>
+            
+            <div>
+                <label for="length_of_play">How long have you played MSF?</label>
+                <select id="length_of_play" name="length_of_play">
+                    <option value="null"> </option>
+                    <option value="less_one_year">Less than 1 year</option>
+                    <option value="one_to_two_years">1-2 years</option>
+                    <option value="two_or_more_years">2 years or more</option>
+                </select>
+            </div>
+            
+            <div >
+                <p>How satisfied are you with the game currently?</p>
+                <input type="radio" 
+                    id="very_satisfied" 
+                    name="satisfaction_level" 
+                    value="very satisfied">
+                <label for="very_satisfied">Very satisfied</label>
+                
+                <input type="radio" 
+                    id="Meh" 
+                    name="satisfaction_level" 
+                    value="Meh">
+                <label for="Meh">Meh</label>
+                
+                <input type="radio" 
+                    id="very_unsatisfied" 
+                    name="satisfaction_level" 
+                    value="very_unsatisfied">
+                <label for="very_unsatisfied">Very unsatisfied</label> 
+            </div>
+            
+            <div>
+                <p>What is your favorite game mode?</p>
+                <input type="checkbox" 
+                    id="mode1" 
+                    name="mode1" 
+                    value="blitz">
+                <lable for="mode1">Blitz</lable>
+                
+                <input type="checkbox" 
+                    id="mode2" 
+                    name="mode2" 
+                    value="raid">
+                <label for="mode2">Raid</label>
+                
+                <input type="checkbox" 
+                    id="mode3" 
+                    name="mode3" 
+                    value="war">
+                <label for="mode3">War</label>   
+            </div>
+
+            <br>
+
+            <div>
+                <label for="other_thoughts">Anything else to share?</label> 
+                <input type="text" 
+                    name="other_thoughts" 
+                    id="other_thoughts">
+            </div>
+
+            <div>
+                <button type="submit" 
+                    id="submit" 
+                    class="submit-button"
+                    >Submit
+                </button>
+            </div>
+
+
+        </form>
+    
+</body>
+</html>

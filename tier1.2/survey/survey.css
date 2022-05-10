@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: rgb(226, 131, 131);
+    margin: 0;
+  }
+  
+  h1 {
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  
+  p {
+    font-size: 1.125rem;
+  }
+
+  form {
+    color: blue;
+  }
+  
+  

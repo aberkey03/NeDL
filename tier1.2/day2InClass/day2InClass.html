@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="day2InClass.css">
+    <script src="day2InClass.js"> </script>
+</head>
+
+<body>
+    <h1>This is the list builder excercise.</h1>
+    <!-- row for the form -->
+    <div class="flexrow" >
+        <!-- column for the form -->
+        <div class="flexcolumn" >
+            <h2>Form</h2> 
+            <form name="listForm">
+                <lable for="word">Word</lable>
+                <input type="text" id="word" name="word">
+                <br><br>
+                <label for="list">List</label>
+                <input type="text" id="list" name="list">
+                <br><br>
+                <input type="button" value="Add to list" onclick="validateAndAdd()">
+            </form>
+        </div>
+
+        <!-- column for list 1 -->
+        <div class="flexcolumn" >
+            <h2>List 1</h2>
+            <table id="list1">  
+            </table>
+            <input type="button" onclick="" value="Clear list 1">
+        </div>
+
+        <!-- column for list 2 -->
+        <div class="flexcolumn" >
+            <h2>List 2</h2>
+            <table id="list2">   
+            </table>
+            <input type="button" onclick="" value="Clear list 2">
+        </div>
+    </div>
+</body>
+</html>
