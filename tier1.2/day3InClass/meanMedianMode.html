@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="meanMedianMode.css">
+    <script src="meanMedianMode.js"> </script>
+</head>
+<body>
+    <h1>Mean, Median, and Mode Calculator</h1>
+    <div class="myflexboxRow"> <!-- main row -->
+        <div class="myflexboxColumn"> <!-- form column -->
+            <form id="numberForm">
+                <label>
+                    Minimum Value: 
+                    <input type="text" name="newMinValue" id="newMinValue">
+                </label><br>
+                <label>
+                    Maximum Value:
+                    <input type="text" name="newMaxValue" id="newMaxValue">
+                </label> <br>
+                <label>
+                    New Value:
+                    <input type="text" name="newValue" id="newValue">
+                </label> <br> <br>
+                <input type="button" onclick="validateAndAdd()" value="Add the new value!">
+            </form>
+        </div>
+
+        <div class="myflexboxColumn"> <!-- column for list of user entries -->
+            <h2>User entries:</h2>
+            <table id="userEntriesList"></table>
+            <input type="button" onclick="clearList()" value="Reset the Calculator.">
+        </div>
+
+        <div class="myflexboxColumn"> <!-- column for mean, median, and mode -->
+            <h2>Mean, Median, and Mode</h2>
+            <!-- p elements get their own line (no br needed) -->
+            <!-- lable is used as a "variable" with no initial value to be replaced later when the js is run -->
+            <p>Mean: <label id="theMean"></label></p>
+            <p>Median: <label id="theMedian"></label></p>
+            <p>Mode: <label id="theMode"></label></p>
+        </div>
+    </div>
+</body>
+</html>
