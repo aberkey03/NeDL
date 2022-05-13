@@ -1,0 +1,40 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <link rel="stylesheet" href="week1Challenge.css">
+     <script src="week1Challenge.js"></script>
+ </head>
+ <body>
+    <div class="flexRow">
+        <div class="flexColumn" id="formColumn"> <!-- column for the form -->
+            <h2>Add a ToDo Item!</h2>
+            <form id="toDoForm">
+                <label for="toDoEntry">To Do:</label>
+                <input type="text" id="toDoEntry" name="toDoEntry">
+                <br><br>
+                <button type="button" onclick="valdidateAndAdd()">Add to To Do list!</button>
+                <br><br>
+                <button type="button" onclick="validateAndDelete()">Delete from To Do list.</button>
+
+            </form>
+        </div>
+
+        <div class="flexColumn" id="incompleteColumn"> <!-- column for incomplete toDos -->
+            <h2>Incomplete To Do's:</h2>
+            <table id="incompleteToDos"></table><br><br>
+            <button type="button" onclick="clearList()">Clear List</button>
+        </div>
+
+        <div class="flexColumn" id="completeColumn"> <!-- column for completed toDos -->
+            <h2>Completed To Do's</h2>
+            <table id="completeToDos"></table><br><br>
+            <button type="button" onclick="clearList()">Clear List</button>
+        </div>
+
+    </div>
+ </body>
+ </html>
