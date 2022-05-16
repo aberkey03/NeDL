@@ -48,7 +48,7 @@ function validateAndDelete(){
         let tableRef = document.getElementById("incompleteToDos");
         //get number of rows (ie total index of the array to create)
         let numToDos = tableRef.rows.length;
-        console.log("total todos:" + numToDos);
+        console.log("total todos: " + numToDos);
         //declare incompleteToDo array
         const incompleteToDo = [];
         //loop through the list and add the value to an array
@@ -65,7 +65,7 @@ function validateAndDelete(){
             //find the postion of deleteToDo
             let deleteLocation = -1;
             deleteLocation = incompleteToDo.indexOf(deleteToDo);
-            console.log(deleteToDo + " will be removed from" + deleteLocation);
+            console.log(deleteToDo + " will be removed from " + deleteLocation);
             //slice the deleteLocation out of the array
             incompleteToDo.splice(deleteLocation, 1);
             console.log(incompleteToDo);
