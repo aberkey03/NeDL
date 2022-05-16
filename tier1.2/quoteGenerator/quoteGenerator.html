@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head >
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Generator</title>
+    <link rel="stylesheet" href="quoteGenerator.css">
+    <script src="quoteGenerator.js"></script>
+</head>
+<body onload="getQuoteTags()">
+    <h1>Quote Generator</h1>
+    <div class="flexRow">
+        <div class="flexColumn" id="inputColumn">
+            <h2>Options:</h2>
+            <label for="quote_length">How long of a quote should be returned?</label>
+            <select id="quote_length">
+                <option value="short">Short</option>
+                <option value="medium">Medium</option>
+                <option value="long">Long</option>
+            </select><br><br>
+            <label for="tags_input">Select the tags you would like to search.</label>
+            <select id="tags_input">
+                
+            </select><br><br>
+            <input type ="button" id="getQuoteButton" onclick="getQuote()" value="Get Quote!">
+        </div>
+
+        <div class="flexColumn" id="quoteBodyColumn">
+            <h2>Quote Body:</h2>
+            <p id="quote_body"></p>
+        </div>
+
+        <div class="flexColumn" id="quoteDetailsColumn">
+            <h2>Quote Details:</h2>
+            <p id="quote_author"></p>
+            <p id="quote_tags"></p>
+            
+        </div>
+    </div><!-- end row div -->
+</body>
+</html>
