@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find a brewery!</title>
+    <link rel="stylesheet" href="breweryAPI.css">
+    <script src="breweryAPI.js"></script>
+</head>
+<body>
+    <div class="sidenav">
+        <h2 id="input_header">Choose your filter options:</h2>
+        <p>All options are optional.</p>
+        <!-- Location filters -->
+        <label for="search_location_type">Fliter by location:</label>
+        <select id="search_location_type">
+            <option value="by_city" id="by_city">City</option>
+            <option value="by_state" id="by_state">State</option> 
+            <option value="by_postal" id="by_postal">Zip Code</option>
+        </select> <br> 
+        
+        <!-- Location text -->
+        <label for="search_location_text">Location</label>
+        <input type="text" id="search_location_text" name="search_location_text">
+        <br><br>
+
+        <!-- Sort order for results -->
+        <label>Sort Order:</label> <br>
+        <input type="radio" id="ascending_sort" name="sort_order" value="asc" onclick="getSortOrderValue(this.value)">
+        <label for="ascending_sort">Ascending</label> <br>
+        <input type="radio" id="descending_sort" name="sort_order" value="desc" onclick="getSortOrderValue(this.value)">
+        <label for="descending_sort">Descending</label> <br>
+        <input type="radio" id="distance_sort" name="sort_order" value="by_dist" onclick="getSortOrderValue(this.value)">
+        <label for="distance_sort">By Distance</label> 
+        <p hidden="true" id="sort_order_value">Not selected.</p><br><br>
+
+        <!-- Number of results per page -->
+        <!-- TODO: adjust default value to 20 -->
+        <label for="number_per_page">Results per page (between 1 and 50):</label> <span id="number_per_page_value_display"> 26</span> <br>
+        <input type="range" id="number_per_page" name="number_per_page" min="1" max="50" defaultValue="20" onchange="updateNumberPerPageDisplay()"> <br> <br>
+
+        <!-- Search button -->
+        <input type="button" onclick="getBreweriesSearch()" value="Search for breweries!">
+
+        <!-- Random Search button -->
+        <input type="button" onclick="getRandomBrewery()" value="Get a random brewery! (will ignore filter options)">
+    </div>
+      
+    <div class="content">
+        <h2>Results</h2>
+        <p id="results_anchor"></p>
+    </div>
+</body>
+</html>

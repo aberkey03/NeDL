@@ -48,7 +48,7 @@ async function getQuote(){
 
 async function getQuoteTags(){
     alert("the page has loaded");
-    //declare api string and fetch tags
+    //declare api string and fetch the tags
     let apiString = "https://api.quotable.io/tags";
     let response = await fetch(apiString);
 
@@ -64,11 +64,11 @@ async function getQuoteTags(){
     };
     console.log(tagArray);
 
-    //initalize variable for the tagSelect, and newOption
+    //initalize variable for the tagSelect input element, and newOption (the tag options being added)
     let tagSelect = document.getElementById("tags_input");
     let newOption = "";
 
-    //loop through the tag array, trim the extra characters, then add the html option tags, 
+    //loop through the tag array, trim the extra characters, then add the html options to the tag select input element 
     for(let i = 0; i < tagArray.length; i++){
         tagArray[i] = tagArray[i].substring(1,tagArray[i].length-1);
         //tagArray[i] = "<option value=" + tagArray[i] + ">" + tagArray[i] + "</option>";
