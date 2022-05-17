@@ -39,3 +39,11 @@
     margin-left: 400px;
     padding-left: 20px;
   }
+
+  .planning {
+    background-color: rgb(240, 237, 92)
+  }
+
+  .closed {
+    background-color: rgb(209, 108, 108)
+  }

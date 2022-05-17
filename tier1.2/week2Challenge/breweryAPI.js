@@ -56,25 +56,18 @@ async function getBreweriesSearch(){
     //create JSON object
     const jsonText = await response.json();
 
-    /* let paraRef = document.getElementById("results_anchor").innerHTML;
-    console.log(paraRef); */
-
     //declare variables for the brewery details
     for(let i = 0; i < jsonText.length; i++){
-        
+        //declare variables for each brewery
         let breweryName = jsonText[i].name;
         let breweryType = jsonText[i].brewery_type;
         let breweryCity = jsonText[i].city;
         let breweryState = jsonText[i].state;
         let breweryCountyProvince = jsonText[i].county_province;
         let breweryWebsite = jsonText[i].website_url;
-        
-        console.log(breweryName, "<a href=\"" + breweryWebsite + "\" a/>");
-
-        let outputParagraph = "<p> Brewery Name: " + breweryName + "<br> Type: " + breweryType + "<br> City: " + breweryCity + "<br> State: " + breweryState + "<br> County/Province: " + breweryCountyProvince + "<br> Website: " + "<a href=\"" + breweryWebsite + "\">"  + breweryWebsite + "</a>" + "</p>";
-        /*   */
+        //create new paragraph for each result and then add 
+        let outputParagraph = "<p class=\"" + jsonText[i].brewery_type + "\" > Brewery Name: " + breweryName + "<br> Type: " + breweryType + "<br> City: " + breweryCity + "<br> State: " + breweryState + "<br> County/Province: " + breweryCountyProvince + "<br> Website: " + "<a href=\"" + breweryWebsite + "\">"  + breweryWebsite + "</a>" + "</p>";
         document.getElementById("results_anchor").innerHTML += outputParagraph;
-        //console.log(paraRef);
     };
 }
 
