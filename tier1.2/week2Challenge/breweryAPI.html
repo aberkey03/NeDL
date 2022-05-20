@@ -9,6 +9,9 @@
     <script src="breweryAPI.js"></script>
 </head>
 <body>
+    <div class="header">
+        <h1>Brewery Finder!</h1>
+    </div>
     <div class="sidenav">
         <h2 id="input_header">Choose your filter options:</h2>
         <p>All options are optional.</p>
@@ -18,12 +21,38 @@
             <option value="by_city" id="by_city">City</option>
             <option value="by_state" id="by_state">State</option> 
             <option value="by_postal" id="by_postal">Zip Code</option>
+            <option value="by_dist" id="by_dist">latitude,longitude</option>
         </select> <br> 
         
         <!-- Location text -->
         <label for="search_location_text">Location</label>
         <input type="text" id="search_location_text" name="search_location_text">
         <br><br>
+
+        <!-- Brewery type -->
+        <span>Brewery Type(s):</span> <br>
+        <input type="radio" id="micro" name="brewery_type" value="micro">
+        <label for="micro"> Micro</label><br>
+        <input type="radio" id="nano" name="brewery_type" value="nano">
+        <label for="nano"> Nano</label><br>
+        <input type="radio" id="regional" name="brewery_type" value="regional">
+        <label for="regional"> Regional</label><br>
+        <input type="radio" id="brewpub" name="brewery_type" value="brewpub">
+        <label for="brewpub"> Brewpub</label><br>
+        <input type="radio" id="large" name="brewery_type" value="large">
+        <label for="large"> Large</label><br>
+        <input type="radio" id="bar" name="brewery_type" value="bar">
+        <label for="bar"> Bar</label><br>
+        <input type="radio" id="contract" name="brewery_type" value="contract">
+        <label for="contract"> Contract</label><br>
+        <input type="radio" id="proprietor" name="brewery_type" value="proprietor">
+        <label for="proprietor"> Proprietor</label>
+        <br><br>
+
+        <!-- Additional options -->
+            <!-- inlcude closed? -->
+            <!-- include planning? -->
+
 
         <!-- Sort order for results -->
         <label>Sort Order:</label> <br>
@@ -36,18 +65,24 @@
         <p hidden="true" id="sort_order_value">Not selected.</p><br><br>
 
         <!-- Number of results per page -->
-        <!-- TODO: adjust default value to 20 -->
-        <label for="number_per_page">Results per page (between 1 and 50):</label> <span id="number_per_page_value_display"> 26</span> <br>
-        <input type="range" id="number_per_page" name="number_per_page" min="1" max="50" defaultValue="20" onchange="updateNumberPerPageDisplay()"> <br> <br>
+        <label for="number_per_page" id="number_per_page_lable">Results per page (between 1 and 50):</label><br>
+        <input type="range" id="number_per_page" name="number_per_page" min="1" max="50" value="20" step="1" oninput="this.nextElementSibling.value = this.value">
+        <output>20</output> <br> <br>
 
         <!-- Search button -->
         <input type="button" onclick="getBreweriesSearch()" value="Search for breweries!">
 
+    </div>
+
+    <div class="spotlight" id="random_brewery">
+        <h2>Spotlight</h2>
         <!-- Random Search button -->
-        <input type="button" onclick="getRandomBrewery()" value="Get a random brewery! (will ignore filter options)">
+        <input type="button" onclick="getRandomBrewery()" value="Get a new spotlight brewery!">
+        <p id="spotlight_anchor"></p>
     </div>
       
-    <div class="content">
+    <div class="results" id="results_div" >
+        <button onclick="clear()">Click to clear!</button>
         <h2>Results</h2>
         <p id="results_anchor"></p>
     </div>
