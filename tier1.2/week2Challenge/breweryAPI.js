@@ -8,8 +8,8 @@
 
 async function getBreweriesSearch(){
     //clear previous resuls
-    let resultsDiv = document.getElementById("results_div").innerHTML;
-    resultsDiv = '';
+    let tableRef = document.getElementById("results_table");
+    tableRef.innerHTML = '';
 
     //declare base api URL
     let apiString = "https://api.openbrewerydb.org/breweries"; //https://www.openbrewerydb.org/documentation
@@ -43,12 +43,15 @@ async function getBreweriesSearch(){
     else if (newSortOrder == "desc"){
         apiString += "&sort=type,name:desc";
     }
-    /* else if(newSortOrder == "by_dist"){ //may not use, need to figure out GeoTaging
-        apiString += "&by_dist";
-    } */
     else{
         apiString = apiString;
     };
+    
+    let keyword = document.getElementById("keyword_text").value;
+    if(keyword != ""){
+        apiString +="&query=" + keyword;
+    }
+    
     console.log(apiString);
 
     //add results per page
@@ -59,8 +62,8 @@ async function getBreweriesSearch(){
     //call API
     let response = await fetch(apiString);
 
-    //clear old text
-    let resultsBody = document.getElementById("results_anchor").innerHTML;
+    /* //clear old text
+    let resultsBody = document.getElementById("results_anchor").innerHTML; */
 
     //create JSON object
     const jsonText = await response.json();
@@ -74,9 +77,11 @@ async function getBreweriesSearch(){
         let breweryState = jsonText[i].state;
         let breweryCountry = jsonText[i].country;
         let breweryWebsite = jsonText[i].website_url;
-        //create new paragraph for each result and then add 
+        //create new paragraph for each result and then add as new row
         let outputParagraph = "<p class= \" " + jsonText[i].brewery_type + "\" > Brewery Name: " + breweryName + "<br> Type: " + breweryType + "<br> City: " + breweryCity + "<br> State: " + breweryState + "<br> Country: " + breweryCountry + "<br> Website: " + "<a href=\"" + breweryWebsite + "\">"  + breweryWebsite + "</a>" + "</p>";
-        document.getElementById("results_anchor").innerHTML += outputParagraph;
+        //document.getElementById("results_anchor").innerHTML += outputParagraph;
+        console.log(tableRef.id);
+        (tableRef.insertRow(tableRef.rows.length)).innerHTML = outputParagraph;
     };
 }
 
@@ -112,7 +117,7 @@ async function getRandomBrewery(){
 }
 
 function clear(){
-    document.getElementById("'results_div'").innerHTML = "";
+    document.getElementById('results_table').innerHTML = "";
 
 }
 
