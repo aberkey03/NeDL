@@ -1,0 +1,16 @@
+C:\Users\ABerkey\Desktop\NeDL\tier1.2\week3\HelloWorld\ClassRoster\bin\Debug\net5.0\ClassRoster.exe
+C:\Users\ABerkey\Desktop\NeDL\tier1.2\week3\HelloWorld\ClassRoster\bin\Debug\net5.0\ClassRoster.deps.json
+C:\Users\ABerkey\Desktop\NeDL\tier1.2\week3\HelloWorld\ClassRoster\bin\Debug\net5.0\ClassRoster.runtimeconfig.json
+C:\Users\ABerkey\Desktop\NeDL\tier1.2\week3\HelloWorld\ClassRoster\bin\Debug\net5.0\ClassRoster.runtimeconfig.dev.json
+C:\Users\ABerkey\Desktop\NeDL\tier1.2\week3\HelloWorld\ClassRoster\bin\Debug\net5.0\ClassRoster.dll
+C:\Users\ABerkey\Desktop\NeDL\tier1.2\week3\HelloWorld\ClassRoster\bin\Debug\net5.0\ref\ClassRoster.dll
+C:\Users\ABerkey\Desktop\NeDL\tier1.2\week3\HelloWorld\ClassRoster\bin\Debug\net5.0\ClassRoster.pdb
+C:\Users\ABerkey\Desktop\NeDL\tier1.2\week3\HelloWorld\ClassRoster\obj\Debug\net5.0\ClassRoster.csproj.AssemblyReference.cache
+C:\Users\ABerkey\Desktop\NeDL\tier1.2\week3\HelloWorld\ClassRoster\obj\Debug\net5.0\ClassRoster.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ABerkey\Desktop\NeDL\tier1.2\week3\HelloWorld\ClassRoster\obj\Debug\net5.0\ClassRoster.AssemblyInfoInputs.cache
+C:\Users\ABerkey\Desktop\NeDL\tier1.2\week3\HelloWorld\ClassRoster\obj\Debug\net5.0\ClassRoster.AssemblyInfo.cs
+C:\Users\ABerkey\Desktop\NeDL\tier1.2\week3\HelloWorld\ClassRoster\obj\Debug\net5.0\ClassRoster.csproj.CoreCompileInputs.cache
+C:\Users\ABerkey\Desktop\NeDL\tier1.2\week3\HelloWorld\ClassRoster\obj\Debug\net5.0\ClassRoster.dll
+C:\Users\ABerkey\Desktop\NeDL\tier1.2\week3\HelloWorld\ClassRoster\obj\Debug\net5.0\ref\ClassRoster.dll
+C:\Users\ABerkey\Desktop\NeDL\tier1.2\week3\HelloWorld\ClassRoster\obj\Debug\net5.0\ClassRoster.pdb
+C:\Users\ABerkey\Desktop\NeDL\tier1.2\week3\HelloWorld\ClassRoster\obj\Debug\net5.0\ClassRoster.genruntimeconfig.cache
