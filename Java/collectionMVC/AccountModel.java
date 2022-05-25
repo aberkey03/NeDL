@@ -5,8 +5,8 @@ public class AccountModel { //main Model
     private int accountID;
     private String accountType;
     private double accountBalance;
-    private double depositAmount;
-    private double withdrawAmount;
+/*     private double depositAmount;
+    private double withdrawAmount; */
 
     //default contructor
     public AccountModel(){
@@ -39,12 +39,12 @@ public class AccountModel { //main Model
     public void setAccountBalance(double accountBalance){
         this.accountBalance = accountBalance;
     }
-    public void setDepositAmount(double depositAmount){
+/*     public void setDepositAmount(double depositAmount){
         this.depositAmount = depositAmount;
     }
     public void setWithdrawAmount(double withdrawAmount){
         this.withdrawAmount = withdrawAmount;
-    }
+    } */
 
     //methods
     
