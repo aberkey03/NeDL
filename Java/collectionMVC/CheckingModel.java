@@ -1,20 +1,18 @@
-import javax.management.Descriptor;
 
-public class AccountModel { //main Model
+
+public class CheckingModel implements IAccountModel{ //main Model
     //private fields
     private int accountID;
     private String accountType;
     private double accountBalance;
-/*     private double depositAmount;
-    private double withdrawAmount; */
 
     //default contructor
-    public AccountModel(){
+    public CheckingModel(){
         accountID = -1;
-        accountType = "undefined account type";
+        accountType = "CHECKING";
         accountBalance = -1;
     }
-    public AccountModel(int accountID, String accountType, double accountBalance){
+    public CheckingModel(int accountID, String accountType, double accountBalance){
         this.accountID = accountID;
         this.accountType = accountType;
         this.accountBalance = accountBalance;
@@ -39,12 +37,6 @@ public class AccountModel { //main Model
     public void setAccountBalance(double accountBalance){
         this.accountBalance = accountBalance;
     }
-/*     public void setDepositAmount(double depositAmount){
-        this.depositAmount = depositAmount;
-    }
-    public void setWithdrawAmount(double withdrawAmount){
-        this.withdrawAmount = withdrawAmount;
-    } */
 
     //methods
     
@@ -54,6 +46,8 @@ public class AccountModel { //main Model
     }
     //withdraw
     public void Withdraw(double withdrawAmount){
-        accountBalance = accountBalance - withdrawAmount;
+        if(accountBalance - withdrawAmount < 0){
+
+        }
     }
 }

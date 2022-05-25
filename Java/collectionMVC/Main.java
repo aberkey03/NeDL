@@ -2,7 +2,7 @@ public class Main {
     public static void main(String[] args) {
 
         //default model constructor, should start with default values
-        AccountModel testAccount = new AccountModel();
+        IAccountModel testAccount = new MortgageModel();
 
         //view (no contructor), will use to display the values of the account properties
         AccountView accountView = new AccountView();
@@ -14,7 +14,7 @@ public class Main {
         accountControler.updateAccountView();
 
         //use controler to update values
-        accountControler.setAccountType("Checking");
+        /* accountControler.setAccountType("Checking"); */
         accountControler.setAccountID(111);
         accountControler.setAccountBalance(1000.0);
 
@@ -26,5 +26,7 @@ public class Main {
 
         //print updated values
         accountControler.updateAccountView();
+
+
     }
   }

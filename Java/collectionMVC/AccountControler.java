@@ -2,11 +2,11 @@ import javax.print.DocFlavor.CHAR_ARRAY;
 
 public class AccountControler {
     //create model and view objects
-    private AccountModel accountModel;
+    private IAccountModel accountModel;
     private AccountView accountView;
 
     //contructor, includes view and model objects
-    public AccountControler(AccountModel accountModel, AccountView accountView){
+    public AccountControler(IAccountModel accountModel, AccountView accountView){
         this.accountModel = accountModel;
         this.accountView = accountView;
     }

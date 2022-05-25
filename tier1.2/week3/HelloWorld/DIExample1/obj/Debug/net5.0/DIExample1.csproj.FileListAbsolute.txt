@@ -1,0 +1,16 @@
+C:\Users\ABerkey\Desktop\NeDL\tier1.2\week3\HelloWorld\DIExample1\bin\Debug\net5.0\DIExample1.exe
+C:\Users\ABerkey\Desktop\NeDL\tier1.2\week3\HelloWorld\DIExample1\bin\Debug\net5.0\DIExample1.deps.json
+C:\Users\ABerkey\Desktop\NeDL\tier1.2\week3\HelloWorld\DIExample1\bin\Debug\net5.0\DIExample1.runtimeconfig.json
+C:\Users\ABerkey\Desktop\NeDL\tier1.2\week3\HelloWorld\DIExample1\bin\Debug\net5.0\DIExample1.runtimeconfig.dev.json
+C:\Users\ABerkey\Desktop\NeDL\tier1.2\week3\HelloWorld\DIExample1\bin\Debug\net5.0\DIExample1.dll
+C:\Users\ABerkey\Desktop\NeDL\tier1.2\week3\HelloWorld\DIExample1\bin\Debug\net5.0\ref\DIExample1.dll
+C:\Users\ABerkey\Desktop\NeDL\tier1.2\week3\HelloWorld\DIExample1\bin\Debug\net5.0\DIExample1.pdb
+C:\Users\ABerkey\Desktop\NeDL\tier1.2\week3\HelloWorld\DIExample1\obj\Debug\net5.0\DIExample1.csproj.AssemblyReference.cache
+C:\Users\ABerkey\Desktop\NeDL\tier1.2\week3\HelloWorld\DIExample1\obj\Debug\net5.0\DIExample1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ABerkey\Desktop\NeDL\tier1.2\week3\HelloWorld\DIExample1\obj\Debug\net5.0\DIExample1.AssemblyInfoInputs.cache
+C:\Users\ABerkey\Desktop\NeDL\tier1.2\week3\HelloWorld\DIExample1\obj\Debug\net5.0\DIExample1.AssemblyInfo.cs
+C:\Users\ABerkey\Desktop\NeDL\tier1.2\week3\HelloWorld\DIExample1\obj\Debug\net5.0\DIExample1.csproj.CoreCompileInputs.cache
+C:\Users\ABerkey\Desktop\NeDL\tier1.2\week3\HelloWorld\DIExample1\obj\Debug\net5.0\DIExample1.dll
+C:\Users\ABerkey\Desktop\NeDL\tier1.2\week3\HelloWorld\DIExample1\obj\Debug\net5.0\ref\DIExample1.dll
+C:\Users\ABerkey\Desktop\NeDL\tier1.2\week3\HelloWorld\DIExample1\obj\Debug\net5.0\DIExample1.pdb
+C:\Users\ABerkey\Desktop\NeDL\tier1.2\week3\HelloWorld\DIExample1\obj\Debug\net5.0\DIExample1.genruntimeconfig.cache
