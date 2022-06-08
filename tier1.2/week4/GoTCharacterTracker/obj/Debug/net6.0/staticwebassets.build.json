@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "Hash": "Z8/3ZKgKW1iXKYp8+boc7vZsqyHQPD07PsEHXtcYIHM=",
+  "Source": "GoTCharacterTracker",
+  "BasePath": "_content/GoTCharacterTracker",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "GoTCharacterTracker\\wwwroot",
+      "Source": "GoTCharacterTracker",
+      "ContentRoot": "C:\\Users\\ABerkey\\Desktop\\NeDL\\tier1.2\\week4\\GoTCharacterTracker\\wwwroot\\",
+      "BasePath": "_content/GoTCharacterTracker",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\ABerkey\\Desktop\\NeDL\\tier1.2\\week4\\GoTCharacterTracker\\wwwroot\\css\\site.css",
+      "SourceId": "GoTCharacterTracker",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ABerkey\\Desktop\\NeDL\\tier1.2\\week4\\GoTCharacterTracker\\wwwroot\\",
+      "BasePath": "_content/GoTCharacterTracker",
+      "RelativePath": "css/site.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\ABerkey\\Desktop\\NeDL\\tier1.2\\week4\\GoTCharacterTracker\\wwwroot\\index.html",
+      "SourceId": "GoTCharacterTracker",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ABerkey\\Desktop\\NeDL\\tier1.2\\week4\\GoTCharacterTracker\\wwwroot\\",
+      "BasePath": "_content/GoTCharacterTracker",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "C:\\Users\\ABerkey\\Desktop\\NeDL\\tier1.2\\week4\\GoTCharacterTracker\\wwwroot\\js\\site.js",
+      "SourceId": "GoTCharacterTracker",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ABerkey\\Desktop\\NeDL\\tier1.2\\week4\\GoTCharacterTracker\\wwwroot\\",
+      "BasePath": "_content/GoTCharacterTracker",
+      "RelativePath": "js/site.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\site.js"
+    }
+  ]
+}

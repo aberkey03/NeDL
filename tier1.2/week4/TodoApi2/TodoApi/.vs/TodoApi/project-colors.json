@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "a7bf8e7f-b966-4a10-89d2-be3dc2f4f928": {
+      "ProjectGuid": "a7bf8e7f-b966-4a10-89d2-be3dc2f4f928",
+      "DisplayName": "TodoApi",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

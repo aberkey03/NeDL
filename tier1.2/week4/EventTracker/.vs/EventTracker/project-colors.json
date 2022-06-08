@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "221eeb21-85f9-4ae0-a970-40b93bb4b1be": {
+      "ProjectGuid": "221eeb21-85f9-4ae0-a970-40b93bb4b1be",
+      "DisplayName": "EventTracker",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
