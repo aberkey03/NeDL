@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers();
-builder.Services.AddDbContext<GoTCharacterContext>(opt => opt.UseInMemoryDatabase("GotCharacterList"));
+builder.Services.AddDbContext<GoTCharacterContext>(opt => opt.UseSqlServer("name=ConnectionStrings:DefaultConnection"));
 
 var app = builder.Build();
 
